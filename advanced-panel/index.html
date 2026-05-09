@@ -1,1 +1,847 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عرض خدمات — Advanced Panel Solutions | وكالة سحاب</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  :root {
+    --steel: #1C2536;
+    --slate: #2D3A4A;
+    --blue: #1A56DB;
+    --cyan: #38BDF8;
+    --silver: #94A3B8;
+    --light: #F1F5F9;
+    --border: #E2E8F0;
+    --white: #ffffff;
+    --gold: #F59E0B;
+  }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: #e8ecf0;
+    color: #1e293b;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .page {
+    width: 794px;
+    margin: 24px auto;
+    background: var(--white);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  /* ===== COVER ===== */
+  .cover {
+    background: var(--steel);
+    min-height: 1120px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover-bg-lines {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 60px,
+        rgba(255,255,255,0.02) 60px,
+        rgba(255,255,255,0.02) 61px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 60px,
+        rgba(255,255,255,0.02) 60px,
+        rgba(255,255,255,0.02) 61px
+      );
+  }
+
+  .cover-accent {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 6px;
+    background: linear-gradient(90deg, var(--blue), var(--cyan));
+  }
+
+  .cover-diagonal {
+    position: absolute;
+    top: 0; left: 0;
+    width: 340px; height: 100%;
+    background: rgba(26,86,219,0.06);
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
+  }
+
+  .cover-header {
+    padding: 44px 52px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+
+  .logo-box { display: flex; flex-direction: column; align-items: flex-end; }
+  .logo-text { font-size: 28px; font-weight: 900; color: var(--white); letter-spacing: 3px; }
+  .logo-sub { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1px; margin-top: 2px; }
+
+  .contact-info { text-align: left; color: rgba(255,255,255,0.45); font-size: 11px; line-height: 2; }
+
+  .cover-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 52px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .for-label {
+    font-size: 11px;
+    color: var(--cyan);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  .client-name-en {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+
+  .client-name-ar {
+    font-size: 16px;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 36px;
+  }
+
+  .cover-divider {
+    width: 50px; height: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--cyan));
+    margin-bottom: 36px;
+  }
+
+  .services-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 52px; }
+
+  .pill {
+    background: rgba(26,86,219,0.2);
+    border: 1px solid rgba(56,189,248,0.3);
+    color: var(--cyan);
+    padding: 8px 20px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 32px;
+    margin-top: auto;
+  }
+
+  .meta-item .meta-label { font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 1px; margin-bottom: 2px; }
+  .meta-item .meta-val { font-size: 12px; color: rgba(255,255,255,0.6); font-weight: 600; }
+
+  .cover-footer {
+    padding: 24px 52px;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-footer span { font-size: 11px; color: rgba(255,255,255,0.3); }
+
+  .valid-badge {
+    background: rgba(26,86,219,0.25);
+    border: 1px solid rgba(56,189,248,0.3);
+    color: var(--cyan);
+    padding: 6px 16px;
+    border-radius: 2px;
+    font-size: 11px;
+  }
+
+  /* ===== PAGE HEADER ===== */
+  .page-header {
+    background: var(--steel);
+    padding: 20px 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--blue);
+  }
+
+  .page-header .logo-small { font-size: 17px; font-weight: 900; color: var(--white); letter-spacing: 2px; }
+  .page-header .page-info { font-size: 11px; color: rgba(255,255,255,0.4); }
+
+  /* ===== CONTENT ===== */
+  .content { padding: 44px 52px; }
+
+  .section-label {
+    font-size: 10px; font-weight: 700; color: var(--blue);
+    letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px;
+  }
+
+  .section-title { font-size: 22px; font-weight: 900; color: var(--steel); margin-bottom: 6px; }
+
+  .section-line { width: 36px; height: 3px; background: linear-gradient(90deg, var(--blue), var(--cyan)); margin-bottom: 24px; }
+
+  /* ===== BRIEF GRID ===== */
+  .brief-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 32px; }
+
+  .brief-item {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-right: 3px solid var(--blue);
+    padding: 14px 18px; border-radius: 2px;
+  }
+
+  .brief-item .label { font-size: 10px; color: var(--silver); letter-spacing: 1.5px; font-weight: 700; margin-bottom: 4px; }
+  .brief-item .value { font-size: 13.5px; font-weight: 700; color: var(--steel); }
+
+  /* ===== INTRO BOX ===== */
+  .intro-box {
+    background: var(--steel);
+    color: rgba(255,255,255,0.8);
+    padding: 20px 24px;
+    border-radius: 2px;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 32px;
+    border-right: 4px solid var(--cyan);
+  }
+
+  /* ===== TARGET ===== */
+  .target-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 32px; }
+
+  .target-item {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--light); border: 1px solid var(--border);
+    padding: 11px 16px; border-radius: 2px;
+    font-size: 12.5px; color: #374151;
+  }
+
+  .target-item::before { content: '◆'; color: var(--blue); font-size: 8px; flex-shrink: 0; }
+
+  /* ===== VISUAL DIRECTION ===== */
+  .visual-dir { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 24px; }
+
+  .vd-item {
+    background: var(--steel);
+    text-align: center; padding: 18px 10px;
+    border-radius: 2px; border-bottom: 3px solid var(--blue);
+  }
+
+  .vd-ar { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+  .vd-en { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1px; }
+
+  .colors-row { display: flex; gap: 10px; margin-bottom: 32px; align-items: center; }
+  .color-swatch { width: 36px; height: 36px; border-radius: 2px; flex-shrink: 0; }
+  .color-label { font-size: 11px; color: var(--silver); }
+
+  /* ===== SCOPE ===== */
+  .scope-block { margin-bottom: 28px; }
+
+  .scope-block-title {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--steel); color: var(--white);
+    padding: 13px 20px; font-size: 13.5px; font-weight: 700; border-radius: 2px 2px 0 0;
+  }
+
+  .scope-block-title .num {
+    background: var(--blue); color: white;
+    width: 24px; height: 24px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 900; flex-shrink: 0;
+  }
+
+  .scope-block-title .en-tag { font-size: 11px; color: var(--cyan); margin-right: auto; font-weight: 400; }
+
+  .scope-items { border: 1px solid var(--border); border-top: none; border-radius: 0 0 2px 2px; overflow: hidden; }
+
+  .scope-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 20px; border-bottom: 1px solid var(--border);
+    font-size: 12.5px; color: #374151;
+  }
+
+  .scope-item:last-child { border-bottom: none; }
+  .scope-item:nth-child(even) { background: var(--light); }
+  .scope-item::before { content: '✓'; color: var(--blue); font-weight: 900; flex-shrink: 0; }
+
+  /* ===== DELIVERABLES ===== */
+  .deliverables-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 32px; }
+
+  .deliv-card { border: 1px solid var(--border); border-radius: 2px; overflow: hidden; }
+
+  .deliv-head {
+    background: var(--steel); padding: 12px 16px;
+    font-size: 12px; font-weight: 700; color: var(--white);
+    border-bottom: 2px solid var(--blue);
+  }
+
+  .deliv-body { padding: 12px 16px; background: var(--light); }
+
+  .deliv-body li {
+    font-size: 11.5px; color: #374151;
+    padding: 4px 0; border-bottom: 1px solid var(--border);
+    padding-right: 12px; position: relative;
+  }
+
+  .deliv-body li:last-child { border-bottom: none; }
+
+  .deliv-body li::before {
+    content: '—'; position: absolute; right: 0;
+    color: var(--blue); font-size: 10px;
+  }
+
+  /* ===== PRICING ===== */
+  .pricing-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; overflow: hidden; border-radius: 2px; }
+
+  .pricing-table thead tr { background: var(--steel); color: var(--white); }
+
+  .pricing-table th { padding: 14px 20px; text-align: right; font-size: 12px; font-weight: 700; }
+
+  .pricing-table td { padding: 14px 20px; font-size: 13px; border-bottom: 1px solid var(--border); color: #374151; }
+
+  .pricing-table tr:nth-child(even) td { background: var(--light); }
+
+  .pricing-table tr.total td {
+    background: var(--steel); color: var(--white);
+    font-weight: 900; font-size: 15px; border-bottom: none;
+  }
+
+  .price-val { font-weight: 700; color: var(--steel); }
+  .price-val.big { color: var(--blue); font-size: 16px; }
+
+  /* ===== PAYMENT SCHEDULE ===== */
+  .payment-steps { display: flex; margin-bottom: 32px; border: 1px solid var(--border); border-radius: 2px; overflow: hidden; }
+
+  .payment-step { flex: 1; text-align: center; padding: 20px 12px; border-left: 1px solid var(--border); }
+  .payment-step:last-child { border-left: none; }
+
+  .payment-step .ps-pct { font-size: 26px; font-weight: 900; color: var(--blue); }
+  .payment-step .ps-amount { font-size: 13px; font-weight: 700; color: var(--steel); margin: 4px 0; }
+  .payment-step .ps-when { font-size: 11px; color: var(--silver); line-height: 1.5; }
+
+  /* ===== TIMELINE ===== */
+  .timeline { display: flex; margin-bottom: 32px; }
+
+  .tl-item { flex: 1; text-align: center; position: relative; }
+
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    top: 18px; right: 50%; left: -50%;
+    height: 2px;
+    background: var(--border);
+    z-index: 0;
+  }
+
+  .tl-item:first-child::before { display: none; }
+
+  .tl-dot {
+    width: 36px; height: 36px;
+    background: var(--blue); color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 900;
+    margin: 0 auto 10px;
+    position: relative; z-index: 1;
+  }
+
+  .tl-title { font-size: 12px; font-weight: 700; color: var(--steel); margin-bottom: 3px; }
+  .tl-dur { font-size: 10.5px; color: var(--silver); }
+
+  /* ===== REQUIREMENTS ===== */
+  .req-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 32px; }
+
+  .req-item {
+    background: var(--light); border: 1px solid var(--border);
+    padding: 11px 14px; border-radius: 2px;
+    font-size: 12px; color: #374151;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .req-item::before { content: '◆'; color: var(--blue); font-size: 8px; flex-shrink: 0; }
+
+  /* ===== NOTE ===== */
+  .note-box {
+    background: #EFF6FF; border: 1px solid #BFDBFE;
+    border-right: 4px solid var(--blue);
+    padding: 14px 18px; border-radius: 2px;
+    font-size: 12.5px; color: #1e3a8a;
+    margin-bottom: 24px; line-height: 1.8;
+  }
+
+  /* ===== NEXT STEPS ===== */
+  .steps { display: flex; gap: 0; margin-bottom: 32px; }
+
+  .step {
+    flex: 1; text-align: center; padding: 20px 12px;
+    border: 1px solid var(--border); border-left: none;
+  }
+
+  .step:first-child { border-left: 1px solid var(--border); border-radius: 0 2px 2px 0; }
+  .step:last-child { border-radius: 2px 0 0 2px; }
+
+  .step .s-num {
+    width: 32px; height: 32px;
+    background: var(--steel); color: white; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 900; margin: 0 auto 10px;
+  }
+
+  .step .s-title { font-size: 12px; font-weight: 700; color: var(--steel); margin-bottom: 4px; }
+  .step .s-sub { font-size: 10.5px; color: var(--silver); }
+
+  /* ===== FOOTER ===== */
+  .page-footer {
+    background: var(--steel);
+    padding: 16px 52px;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 2px solid var(--blue);
+  }
+
+  .page-footer span { font-size: 11px; color: rgba(255,255,255,0.35); }
+  .footer-contact { font-size: 11px; color: rgba(255,255,255,0.45); text-align: left; }
+  .page-num { font-size: 11px; color: rgba(255,255,255,0.25); }
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE 1: COVER ===== -->
+<div class="page">
+  <div class="cover">
+    <div class="cover-bg-lines"></div>
+    <div class="cover-diagonal"></div>
+    <div class="cover-accent"></div>
+
+    <div class="cover-header">
+      <div class="contact-info">
+        www.sahab.agency<br>
+        hello@sahab.agency<br>
+        @sahabagency
+      </div>
+      <div class="logo-box">
+        <div class="logo-text">SAHAB</div>
+        <div class="logo-sub">وكالة سحاب للتسويق والتصميم الرقمي</div>
+      </div>
+    </div>
+
+    <div class="cover-body">
+      <div class="for-label">عرض الخدمات — مُعدّ خصيصاً لـ</div>
+      <div class="client-name-en">Advanced Panel<br>Solutions</div>
+      <div class="client-name-ar">مصنع متخصص في حلول الساندويتش بانل</div>
+      <div class="cover-divider"></div>
+
+      <div class="services-pills">
+        <div class="pill">تصميم الهوية البصرية</div>
+        <div class="pill">بروفايل الشركة</div>
+        <div class="pill">تصميم وتطوير الموقع</div>
+      </div>
+
+      <div class="cover-meta">
+        <div class="meta-item">
+          <div class="meta-label">التاريخ</div>
+          <div class="meta-val">مايو 2026</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">مدة التنفيذ</div>
+          <div class="meta-val">5 – 7 أسابيع</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">إجمالي الاستثمار</div>
+          <div class="meta-val">40,000 ريال</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">المسؤول</div>
+          <div class="meta-val">Idif Rayan</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-footer">
+      <div class="valid-badge">صالح لمدة 7 أيام من تاريخ الإرسال</div>
+      <span>هذا العرض سري وخاص بـ Advanced Panel Solutions</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE 2: BRIEF + INTRO ===== -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-info">عرض خدمات 2026 — 2/5</div>
+    <div class="logo-small">SAHAB</div>
+  </div>
+  <div class="content">
+
+    <div class="section-label">PROJECT BRIEF</div>
+    <div class="section-title">بريف المشروع</div>
+    <div class="section-line"></div>
+
+    <div class="brief-grid">
+      <div class="brief-item">
+        <div class="label">اسم الشركة</div>
+        <div class="value">Advanced Panel Solutions</div>
+      </div>
+      <div class="brief-item">
+        <div class="label">نوع النشاط</div>
+        <div class="value">مصنع تصنيع وتوريد حلول الساندويتش بانل</div>
+      </div>
+      <div class="brief-item">
+        <div class="label">مرحلة المشروع</div>
+        <div class="value">Start-up / مشروع جديد في التأسيس</div>
+      </div>
+      <div class="brief-item">
+        <div class="label">هدف العرض</div>
+        <div class="value">تأسيس هوية + بروفايل + موقع احترافي</div>
+      </div>
+    </div>
+
+    <div class="intro-box">
+      بناءً على متطلباتكم لتأسيس علامة تجارية احترافية لمصنع الساندويتش بانل، أعددنا هذا العرض المخصص الذي يشمل ثلاثة محاور أساسية لإطلاق شركتكم بصورة موثوقة ومتكاملة أمام السوق. المشروع يحتاج تأسيساً صحيحاً من البداية — الهوية والبروفايل والموقع ستكون الواجهة الرسمية للشركة أمام العملاء والجهات المستهدفة.
+    </div>
+
+    <div class="section-label">TARGET AUDIENCE</div>
+    <div class="section-title">الجمهور المستهدف</div>
+    <div class="section-line"></div>
+
+    <div class="target-grid">
+      <div class="target-item">شركات المقاولات</div>
+      <div class="target-item">المطورون العقاريون</div>
+      <div class="target-item">المصانع والمستودعات</div>
+      <div class="target-item">مشاريع البناء الصناعي والتجاري</div>
+      <div class="target-item">شركات العزل والإنشاءات</div>
+      <div class="target-item">الجهات الحكومية والخاصة</div>
+      <div class="target-item">أصحاب المشاريع الصناعية والزراعية</div>
+      <div class="target-item">المشاريع التجارية الكبرى</div>
+    </div>
+
+    <div class="section-label">VISUAL DIRECTION</div>
+    <div class="section-title">الاتجاه البصري المقترح</div>
+    <div class="section-line"></div>
+
+    <div class="visual-dir">
+      <div class="vd-item"><div class="vd-ar">صناعي</div><div class="vd-en">Industrial</div></div>
+      <div class="vd-item"><div class="vd-ar">حديث</div><div class="vd-en">Modern</div></div>
+      <div class="vd-item"><div class="vd-ar">احترافي</div><div class="vd-en">Corporate</div></div>
+      <div class="vd-item"><div class="vd-ar">موثوق وقوي</div><div class="vd-en">Trustworthy</div></div>
+    </div>
+
+    <div class="colors-row">
+      <div class="color-swatch" style="background:#1A56DB;"></div>
+      <div class="color-swatch" style="background:#64748B;"></div>
+      <div class="color-swatch" style="background:#1C2536;"></div>
+      <div class="color-swatch" style="background:#F8FAFC; border:1px solid #e2e8f0;"></div>
+      <div class="color-label">ألوان صناعية تعكس التقنية والجودة — يتم تحديدها نهائياً بعد الاجتماع التعريفي</div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <div class="footer-contact">Idif Rayan | +966 55 562 2456 | hello@sahab.agency</div>
+    <span>وكالة سحاب — عرض خدمات 2026</span>
+    <div class="page-num">2 / 5</div>
+  </div>
+</div>
+
+<!-- ===== PAGE 3: SCOPE ===== -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-info">عرض خدمات 2026 — 3/5</div>
+    <div class="logo-small">SAHAB</div>
+  </div>
+  <div class="content">
+
+    <div class="section-label">SCOPE OF WORK</div>
+    <div class="section-title">نطاق العمل المطلوب</div>
+    <div class="section-line"></div>
+
+    <div class="scope-block">
+      <div class="scope-block-title">
+        <div class="num">١</div>
+        الهوية البصرية
+        <span class="en-tag">Brand Visual Identity</span>
+      </div>
+      <ul class="scope-items">
+        <li class="scope-item">تصميم الشعار (Logo Design) بصيغ احترافية كاملة</li>
+        <li class="scope-item">الألوان الرئيسية والثانوية وخطوط العلامة التجارية</li>
+        <li class="scope-item">بناء النمط البصري العام للبراند</li>
+        <li class="scope-item">قوالب سوشيال ميديا مبدئية جاهزة للاستخدام</li>
+        <li class="scope-item">قوالب رسمية (بيزنس كارد — ليترهيد)</li>
+        <li class="scope-item">دليل استخدام الهوية المبسط (Brand Guidelines)</li>
+      </ul>
+    </div>
+
+    <div class="scope-block">
+      <div class="scope-block-title">
+        <div class="num">٢</div>
+        بروفايل الشركة
+        <span class="en-tag">Company Profile</span>
+      </div>
+      <ul class="scope-items">
+        <li class="scope-item">25–30 صفحة — نسختين: عربي + إنجليزي</li>
+        <li class="scope-item">غلاف احترافي + نبذة الشركة + الرؤية والرسالة والقيم</li>
+        <li class="scope-item">المنتجات وأنواع الساندويتش بانل + الاستخدامات</li>
+        <li class="scope-item">القطاعات المستهدفة + الجودة والمعايير</li>
+        <li class="scope-item">تصميم صناعي / كوربورت احترافي</li>
+        <li class="scope-item">PDF جاهز للطباعة والاستخدام الرقمي</li>
+      </ul>
+    </div>
+
+    <div class="scope-block">
+      <div class="scope-block-title">
+        <div class="num">٣</div>
+        الموقع الإلكتروني
+        <span class="en-tag">Website Design & Development</span>
+      </div>
+      <ul class="scope-items">
+        <li class="scope-item">الصفحة الرئيسية + من نحن + المنتجات والحلول</li>
+        <li class="scope-item">القطاعات التي نخدمها + الجودة والمعايير</li>
+        <li class="scope-item">تواصل معنا + نموذج طلب عرض سعر</li>
+        <li class="scope-item">تصميم UI/UX كامل على Figma</li>
+        <li class="scope-item">Responsive لجميع الأجهزة (موبايل + تابلت + ديسكتوب)</li>
+        <li class="scope-item">نسختين: عربي + إنجليزي</li>
+        <li class="scope-item">برمجة وتطوير كامل وجاهز للنشر</li>
+      </ul>
+    </div>
+
+    <div class="section-label">DELIVERABLES</div>
+    <div class="section-title">مخرجات المشروع</div>
+    <div class="section-line"></div>
+
+    <div class="deliverables-grid">
+      <div class="deliv-card">
+        <div class="deliv-head">الهوية البصرية</div>
+        <ul class="deliv-body">
+          <li>ملفات الشعار (AI, SVG, PNG, PDF)</li>
+          <li>دليل استخدام الهوية</li>
+          <li>قوالب رسمية جاهزة</li>
+          <li>قوالب سوشيال ميديا</li>
+        </ul>
+      </div>
+      <div class="deliv-card">
+        <div class="deliv-head">بروفايل الشركة</div>
+        <ul class="deliv-body">
+          <li>PDF رقمي جاهز للإرسال</li>
+          <li>نسخة قابلة للطباعة</li>
+          <li>نسختين: عربي + إنجليزي</li>
+          <li>ملف المصدر حسب الاتفاق</li>
+        </ul>
+      </div>
+      <div class="deliv-card">
+        <div class="deliv-head">الموقع الإلكتروني</div>
+        <ul class="deliv-body">
+          <li>تصميم UI/UX على Figma</li>
+          <li>موقع مطور كامل ومنشور</li>
+          <li>Responsive لجميع الأجهزة</li>
+          <li>نسختين: عربي + إنجليزي</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <div class="footer-contact">Idif Rayan | +966 55 562 2456 | hello@sahab.agency</div>
+    <span>وكالة سحاب — عرض خدمات 2026</span>
+    <div class="page-num">3 / 5</div>
+  </div>
+</div>
+
+<!-- ===== PAGE 4: PRICING + PAYMENT ===== -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-info">عرض خدمات 2026 — 4/5</div>
+    <div class="logo-small">SAHAB</div>
+  </div>
+  <div class="content">
+
+    <div class="section-label">INVESTMENT</div>
+    <div class="section-title">الباقة الشاملة — Launch Branding Package</div>
+    <div class="section-line"></div>
+
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>الخدمة</th>
+          <th>التفاصيل</th>
+          <th>السعر</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Brand Visual Identity</strong><br><span style="font-size:11px;color:#94A3B8;">الهوية البصرية</span></td>
+          <td>شعار + ألوان + خطوط + قوالب + دليل الهوية + بروفايل الشركة</td>
+          <td class="price-val">22,000 ريال</td>
+        </tr>
+        <tr>
+          <td><strong>Website Design & Development</strong><br><span style="font-size:11px;color:#94A3B8;">الموقع الإلكتروني</span></td>
+          <td>تصميم UI/UX كامل + برمجة وتطوير — عربي + إنجليزي</td>
+          <td class="price-val">18,000 ريال</td>
+        </tr>
+        <tr class="total">
+          <td colspan="2"><strong>الإجمالي الكامل — باقة واحدة شاملة بسعر موحد</strong></td>
+          <td><span class="price-val big" style="color:#38BDF8;">40,000 ريال</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note-box">
+      ملاحظة: أي خدمات إضافية مثل التصوير الاحترافي، كتابة المحتوى من الصفر، الترجمة الاحترافية المعتمدة، صفحات إضافية للموقع، أو أنظمة خاصة — يتم تسعيرها بشكل منفصل.
+    </div>
+
+    <div class="section-label">PAYMENT SCHEDULE</div>
+    <div class="section-title">جدول الدفع</div>
+    <div class="section-line"></div>
+
+    <div class="payment-steps">
+      <div class="payment-step">
+        <div class="ps-pct">50%</div>
+        <div class="ps-amount">20,000 ريال</div>
+        <div class="ps-when">الدفعة الأولى<br>عند اعتماد العرض وبدء المشروع</div>
+      </div>
+      <div class="payment-step">
+        <div class="ps-pct">25%</div>
+        <div class="ps-amount">10,000 ريال</div>
+        <div class="ps-when">الدفعة الثانية<br>بعد اعتماد الهوية والبروفايل</div>
+      </div>
+      <div class="payment-step">
+        <div class="ps-pct">25%</div>
+        <div class="ps-amount">10,000 ريال</div>
+        <div class="ps-when">الدفعة الأخيرة<br>قبل تسليم الملفات أو نشر الموقع</div>
+      </div>
+    </div>
+
+    <div class="section-label">TIMELINE</div>
+    <div class="section-title">مدة التنفيذ المتوقعة: 5 إلى 7 أسابيع</div>
+    <div class="section-line"></div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot">١</div>
+        <div class="tl-title">الكيك أوف</div>
+        <div class="tl-dur">الأسبوع 1</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">٢</div>
+        <div class="tl-title">الهوية البصرية</div>
+        <div class="tl-dur">الأسبوع 1–3</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">٣</div>
+        <div class="tl-title">بروفايل الشركة</div>
+        <div class="tl-dur">الأسبوع 2–4</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">٤</div>
+        <div class="tl-title">تصميم الموقع</div>
+        <div class="tl-dur">الأسبوع 3–5</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">٥</div>
+        <div class="tl-title">التسليم والنشر</div>
+        <div class="tl-dur">الأسبوع 6–7</div>
+      </div>
+    </div>
+
+    <div class="section-label">REQUIREMENTS</div>
+    <div class="section-title">ما نحتاجه منكم للبدء</div>
+    <div class="section-line"></div>
+
+    <div class="req-grid">
+      <div class="req-item">نبذة عن المصنع</div>
+      <div class="req-item">المنتجات الرئيسية وأنواع البانل</div>
+      <div class="req-item">القطاعات والأسواق المستهدفة</div>
+      <div class="req-item">صور المصنع أو المنتجات</div>
+      <div class="req-item">شهادات الجودة والاعتمادات</div>
+      <div class="req-item">الرؤية والرسالة (إن وجدت)</div>
+      <div class="req-item">العملاء المحتملين المستهدفين</div>
+      <div class="req-item">المحتوى: جاهز أم يُكتب من الصفر؟</div>
+      <div class="req-item">الشعار الحالي (إن وجد)</div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <div class="footer-contact">Idif Rayan | +966 55 562 2456 | hello@sahab.agency</div>
+    <span>وكالة سحاب — عرض خدمات 2026</span>
+    <div class="page-num">4 / 5</div>
+  </div>
+</div>
+
+<!-- ===== PAGE 5: NEXT STEPS + CLOSING ===== -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-info">عرض خدمات 2026 — 5/5</div>
+    <div class="logo-small">SAHAB</div>
+  </div>
+  <div class="content">
+
+    <div class="section-label">NEXT STEPS</div>
+    <div class="section-title">الخطوات التالية</div>
+    <div class="section-line"></div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="s-num">١</div>
+        <div class="s-title">مراجعة العرض</div>
+        <div class="s-sub">تواصل معنا بأي استفسار</div>
+      </div>
+      <div class="step">
+        <div class="s-num">٢</div>
+        <div class="s-title">اعتماد العرض</div>
+        <div class="s-sub">تأكيد الموافقة وتحديد موعد الكيك أوف</div>
+      </div>
+      <div class="step">
+        <div class="s-num">٣</div>
+        <div class="s-title">بدء المشروع</div>
+        <div class="s-sub">استلام الدفعة الأولى والبدء الفعلي</div>
+      </div>
+      <div class="step">
+        <div class="s-num">٤</div>
+        <div class="s-title">الانطلاق</div>
+        <div class="s-sub">نبني علامة تليق بطموحاتكم</div>
+      </div>
+    </div>
+
+    <div style="background: var(--steel); border-radius: 2px; padding: 36px 40px; text-align: center; margin-bottom: 8px; position: relative; overflow: hidden;">
+      <div style="position:absolute; bottom:0; left:0; right:0; height:3px; background: linear-gradient(90deg, #1A56DB, #38BDF8);"></div>
+      <div style="font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 10px; line-height: 1.7;">
+        نحن في وكالة سحاب نؤمن بأن التأسيس الصحيح هو أقوى استثمار.
+      </div>
+      <div style="font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 24px;">
+        Advanced Panel Solutions تستحق هوية تعكس طموحها — ونحن هنا لنبنيها معاً.
+      </div>
+      <div style="font-size: 12px; color: #38BDF8; font-weight: 600; letter-spacing: 0.5px;">
+        Idif Rayan &nbsp;|&nbsp; +966 55 562 2456 &nbsp;|&nbsp; hello@sahab.agency
+      </div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <div class="footer-contact">Idif Rayan | +966 55 562 2456 | hello@sahab.agency</div>
+    <span>وكالة سحاب — عرض خدمات 2026</span>
+    <div class="page-num">5 / 5</div>
+  </div>
+</div>
+
+</body>
+</html>
