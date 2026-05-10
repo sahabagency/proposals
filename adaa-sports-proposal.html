@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عرض تجديد الشراكة — أداء سبورتس | وكالة سحاب</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B3A6B;
+    --gold: #C9A84C;
+    --gold-light: #F5E6C0;
+    --white: #FFFFFF;
+    --off-white: #F8F9FB;
+    --gray-light: #F1F4F8;
+    --gray-mid: #E2E8F0;
+    --gray-text: #64748B;
+    --dark: #0F1C2E;
+    --green: #1A6B3A;
+    --green-light: #E6F5EC;
+    --red-light: #FEF2F2;
+    --red: #991B1B;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    background: #E8ECF2;
+    color: var(--dark);
+    direction: rtl;
+    font-size: 14px;
+    line-height: 1.7;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── PAGE STRUCTURE ── */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: var(--white);
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.18);
+    page-break-after: always;
+  }
+
+  /* ── HEADER BAR ── */
+  .page-header {
+    background: var(--navy);
+    padding: 14px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .page-header .brand {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .page-header .contact {
+    color: rgba(255,255,255,0.7);
+    font-size: 11px;
+    text-align: left;
+    direction: ltr;
+  }
+
+  /* ── FOOTER BAR ── */
+  .page-footer {
+    background: var(--gray-light);
+    border-top: 1px solid var(--gray-mid);
+    padding: 10px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: var(--gray-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* ── CONTENT AREA ── */
+  .content {
+    padding: 28px 36px 70px;
+  }
+
+  /* ── COVER PAGE ── */
+  .cover-content {
+    padding: 0;
+    min-height: 297mm;
+    display: flex;
+    flex-direction: column;
+  }
+  .cover-hero {
+    background: var(--navy);
+    padding: 52px 40px 44px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover-hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.1);
+  }
+  .cover-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; right: -40px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .cover-agency {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .cover-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .cover-subtitle {
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 28px;
+  }
+  .cover-client-box {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 8px;
+    padding: 18px 22px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-client-label {
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+  }
+  .cover-client-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+  }
+  .cover-client-sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 2px;
+  }
+
+  .cover-services {
+    padding: 28px 40px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .service-tag {
+    background: var(--navy);
+    color: white;
+    padding: 7px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .cover-meta {
+    padding: 0 40px 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  .meta-item {
+    background: var(--gray-light);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .meta-label {
+    font-size: 10px;
+    color: var(--gray-text);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .meta-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .cover-notice {
+    margin: auto 40px 28px;
+    border-top: 1px solid var(--gray-mid);
+    padding-top: 16px;
+    font-size: 11px;
+    color: var(--gray-text);
+    text-align: center;
+  }
+
+  /* ── SECTION LABELS ── */
+  .section-eyebrow {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gold);
+    margin-bottom: 18px;
+  }
+  .subsection-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 18px 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .subsection-title::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 14px;
+    background: var(--gold);
+    border-radius: 2px;
+  }
+
+  /* ── TABLES ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 12.5px;
+  }
+  th {
+    background: var(--navy);
+    color: white;
+    padding: 10px 14px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  td {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--gray-mid);
+    vertical-align: middle;
+  }
+  tr:nth-child(even) td { background: var(--gray-light); }
+  tr:last-child td { border-bottom: none; }
+
+  .td-label {
+    font-weight: 600;
+    color: var(--navy);
+    background: var(--off-white) !important;
+    width: 35%;
+  }
+
+  /* ── HIGHLIGHTS & BOXES ── */
+  .highlight-box {
+    background: var(--gold-light);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .highlight-box p { font-size: 12.5px; line-height: 1.7; }
+
+  .alert-box {
+    background: #FFF7E6;
+    border-right: 4px solid var(--gold);
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+    margin: 10px 0;
+    font-size: 12.5px;
+  }
+
+  .green-box {
+    background: var(--green-light);
+    border: 1px solid #A7F3D0;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    font-size: 12.5px;
+  }
+
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 14px 0;
+  }
+  .kpi-card {
+    background: var(--off-white);
+    border: 1px solid var(--gray-mid);
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+  }
+  .kpi-number {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+  .kpi-label {
+    font-size: 11px;
+    color: var(--gray-text);
+    margin-top: 4px;
+  }
+
+  /* ── PRICING ── */
+  .price-hero {
+    background: var(--navy);
+    color: white;
+    border-radius: 10px;
+    padding: 24px 28px;
+    text-align: center;
+    margin: 14px 0;
+  }
+  .price-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .price-amount {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .price-sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 6px;
+  }
+  .price-was {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    text-decoration: line-through;
+    margin-top: 4px;
+  }
+
+  .discount-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 14px 0;
+  }
+  .discount-card {
+    border: 1px solid var(--gray-mid);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .discount-header {
+    background: var(--navy);
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .discount-header.gold { background: var(--gold); color: var(--dark); }
+  .discount-pct {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+    padding: 12px 0 2px;
+  }
+  .discount-price {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    padding-bottom: 8px;
+  }
+  .discount-body {
+    padding: 10px;
+    background: var(--off-white);
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: right;
+  }
+
+  /* ── LISTS ── */
+  ul.styled {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0;
+  }
+  ul.styled li {
+    padding: 5px 0;
+    padding-right: 16px;
+    position: relative;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  ul.styled li::before {
+    content: '▸';
+    position: absolute;
+    right: 0;
+    color: var(--gold);
+    font-size: 10px;
+    top: 7px;
+  }
+
+  /* ── STEPS ── */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 14px 0;
+  }
+  .step-card {
+    background: var(--off-white);
+    border: 1px solid var(--gray-mid);
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+  }
+  .step-num {
+    width: 28px; height: 28px;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+  }
+  .step-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .step-body { font-size: 11px; color: var(--gray-text); line-height: 1.5; }
+
+  /* ── BADGE ── */
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .badge-green { background: var(--green-light); color: var(--green); }
+  .badge-gold { background: var(--gold-light); color: #7A5A00; }
+  .badge-navy { background: #EBF0FB; color: var(--navy); }
+  .badge-red { background: var(--red-light); color: var(--red); }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 10px 0;
+  }
+  .col-box {
+    background: var(--off-white);
+    border: 1px solid var(--gray-mid);
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .col-box-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--gray-mid);
+  }
+
+  .note {
+    font-size: 11px;
+    color: var(--gray-text);
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+  p { font-size: 12.5px; margin-bottom: 8px; line-height: 1.7; }
+  strong { color: var(--navy); }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; page-break-after: always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     PAGE 1 — COVER
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">SAHAB</div>
+    <div class="contact">www.sahab.agency &nbsp;|&nbsp; hello@sahab.agency &nbsp;|&nbsp; @sahabagency</div>
+  </div>
+
+  <div class="cover-content">
+    <div class="cover-hero">
+      <div class="cover-agency">وكالة سحاب للتسويق الرقمي</div>
+      <div class="cover-title">عرض تجديد الشراكة<br>السنة الثانية</div>
+      <div class="cover-subtitle">مُعدّ خصيصاً لـ</div>
+      <div class="cover-client-box">
+        <div class="cover-client-label">العميل</div>
+        <div class="cover-client-name">🏋️ أداء سبورتس</div>
+        <div class="cover-client-sub">Ada'a Sports × FitSquad — منصة سلة</div>
+      </div>
+    </div>
+
+    <div class="cover-services">
+      <div class="service-tag">تقرير السنة الأولى</div>
+      <div class="service-tag">عرض التجديد 2026–2027</div>
+      <div class="service-tag">التسعير المقترح</div>
+      <div class="service-tag">توقعات النمو</div>
+    </div>
+
+    <div class="cover-meta">
+      <div class="meta-item">
+        <div class="meta-label">تاريخ بداية التعاون</div>
+        <div class="meta-value">مايو 2025</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">تاريخ التجديد</div>
+        <div class="meta-value">مايو 2026</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">مدير المشروع</div>
+        <div class="meta-value">م. أحمد سلام</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">المتجر الإلكتروني</div>
+        <div class="meta-value">adaasports.com</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">العلامات التجارية</div>
+        <div class="meta-value">Ada'a Sports + FitSquad</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">المنصة</div>
+        <div class="meta-value">سلة</div>
+      </div>
+    </div>
+
+    <div class="cover-notice">
+      هذا العرض سري وخاص بأداء سبورتس — صالح لمدة 7 أيام من تاريخ الإرسال
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>hello@sahab.agency | +905364674194</span>
+    <span>وكالة سحاب — عرض تجديد 2026</span>
+    <span>1 / 6</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 2 — ANNUAL REPORT SUMMARY
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">SAHAB</div>
+    <div class="contact">www.sahab.agency &nbsp;|&nbsp; hello@sahab.agency</div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">ANNUAL REPORT</div>
+    <div class="section-title">ملخص السنة الأولى — مايو 2025 إلى مايو 2026</div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-number">×4</div>
+        <div class="kpi-label">ROAS — أبريل 2026<br>منتج Jump & Go</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-number">+5,400</div>
+        <div class="kpi-label">ريال إنفاق إعلاني<br>في 3 أشهر</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-number">85</div>
+        <div class="kpi-label">قطعة — أول صفقة B2B<br>محل مكملات غذائية</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-number">5</div>
+        <div class="kpi-label">باقات منتجات<br>مُطلقة ومُفعَّلة</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-number">+60</div>
+        <div class="kpi-label">مهمة تقنية<br>في المتجر والمنصات</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-number">4</div>
+        <div class="kpi-label">منصات إعلانية<br>مُدارة بالكامل</div>
+      </div>
+    </div>
+
+    <div class="subsection-title">ما أنجزناه خلال 12 شهراً</div>
+    <table>
+      <tr><th>المرحلة</th><th>الفترة</th><th>أبرز الإنجازات</th></tr>
+      <tr>
+        <td class="td-label">التأسيس والإعداد</td>
+        <td>أبريل – مايو 2025</td>
+        <td>إنشاء المتجر من الصفر، ربط المنصات والدفع والشحن، إعداد Google Workspace وDNS</td>
+      </tr>
+      <tr>
+        <td class="td-label">المحتوى والحملات</td>
+        <td>يوليو – سبتمبر 2025</td>
+        <td>إطلاق أول حملات ميتا، تصميم البنرات، إعداد المحتوى الإعلاني لجميع الباقات</td>
+      </tr>
+      <tr>
+        <td class="td-label">توسع المتجر والباقات</td>
+        <td>أكتوبر 2025 – يناير 2026</td>
+        <td>إطلاق 5 باقات تسويقية، ضبط Cross-sell، تحسين صفحات المنتجات</td>
+      </tr>
+      <tr>
+        <td class="td-label">الأداء والنتائج</td>
+        <td>يناير – أبريل 2026</td>
+        <td>ROAS ×4، حملة رمضان، حملة يوم التأسيس، إنتاج 4 فيديوهات إعلانية</td>
+      </tr>
+      <tr>
+        <td class="td-label">تطوير الأعمال</td>
+        <td>طوال العام</td>
+        <td>أول صفقة B2B (85 قطعة)، قائمة 30+ مؤثر، قائمة أسعار الجملة</td>
+      </tr>
+    </table>
+
+    <div class="alert-box">
+      <strong>خارج نطاق العقد — نُفِّذ مجاناً:</strong> إعداد Google Analytics + Tag Manager + Merchant Center، إصلاح DNS، ربط تابي وتمارا وSTC Pay، إنتاج فيديوهات إعلانية، تحليل المنافسين، ربط مستودع ستوقو، محتوى رمضان واليوم الوطني ويوم التأسيس.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>hello@sahab.agency | +905364674194</span>
+    <span>وكالة سحاب — عرض تجديد 2026</span>
+    <span>2 / 6</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 3 — SCOPE OF WORK (YEAR 2)
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">SAHAB</div>
+    <div class="contact">www.sahab.agency &nbsp;|&nbsp; hello@sahab.agency</div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">SCOPE OF WORK</div>
+    <div class="section-title">نطاق العمل — السنة الثانية</div>
+
+    <div class="subsection-title">الباقة المُعدَّلة المقترحة</div>
+    <p>الباقة الأساسية لدينا (BASIC) سعرها 3,299 ريال شهرياً وتشمل ثلاث منصات وSEO أساسي. بعد دراسة احتياجاتك الفعلية، تم تعديلها لتُركِّز على ما يحقق نتائج مباشرة في مرحلتك الحالية.</p>
+
+    <table>
+      <tr><th>الخدمة</th><th>تفاصيل التنفيذ</th><th>الحالة</th></tr>
+      <tr>
+        <td class="td-label">📱 إدارة المنصات</td>
+        <td>إنستقرام + TikTok — 8 منشورات + 12 ستوري + 2 فيديو شهرياً</td>
+        <td><span class="badge badge-green">مشمولة</span></td>
+      </tr>
+      <tr>
+        <td class="td-label">📢 الحملات الإعلانية</td>
+        <td>حملة ميتا مستمرة بدون انقطاع — ميزانية الإعلانات منفصلة يدفعها العميل</td>
+        <td><span class="badge badge-green">مشمولة</span></td>
+      </tr>
+      <tr>
+        <td class="td-label">🎬 UGC Coordination</td>
+        <td>تنسيق مع 2–3 micro-influencers شهرياً — منتجات مقابل محتوى فيديو حقيقي</td>
+        <td><span class="badge badge-green">مشمولة</span></td>
+      </tr>
+      <tr>
+        <td class="td-label">🤖 تصاميم AI</td>
+        <td>بانرات العروض والمناسبات (رمضان، اليوم الوطني، التأسيس) بتقنية AI</td>
+        <td><span class="badge badge-green">مشمولة</span></td>
+      </tr>
+      <tr>
+        <td class="td-label">🤝 قناة B2B</td>
+        <td>تواصل شهري منظم مع نوادي ومحلات مكملات في المنطقة الشرقية عبر واتساب</td>
+        <td><span class="badge badge-green">مشمولة</span></td>
+      </tr>
+      <tr>
+        <td class="td-label">📊 التقرير الشهري</td>
+        <td>جدول مبسط: إنفاق / مبيعات / ROAS / توصية الشهر القادم</td>
+        <td><span class="badge badge-green">مشمولة</span></td>
+      </tr>
+      <tr>
+        <td class="td-label">🔍 SEO</td>
+        <td>مرحلة لاحقة — يُفعَّل عند الوصول إلى 20,000+ ريال مبيعات شهرياً</td>
+        <td><span class="badge badge-red">مؤجَّل</span></td>
+      </tr>
+      <tr>
+        <td class="td-label">📘 فيسبوك</td>
+        <td>موقوف مؤقتاً — الجمهور المستهدف أكثر نشاطاً على إنستقرام وTikTok</td>
+        <td><span class="badge badge-red">موقوف</span></td>
+      </tr>
+    </table>
+
+    <div class="two-col">
+      <div class="col-box">
+        <div class="col-box-title">🎯 أولويات السنة الثانية</div>
+        <ul class="styled">
+          <li>استمرارية الحملات بدون انقطاع</li>
+          <li>بناء مخزن محتوى UGC متجدد</li>
+          <li>تطوير قناة B2B إلى مصدر دخل منتظم</li>
+          <li>تفعيل Cross-sell لرفع متوسط قيمة السلة</li>
+          <li>تركيز جغرافي على المنطقة الشرقية أولاً</li>
+        </ul>
+      </div>
+      <div class="col-box">
+        <div class="col-box-title">⛔ ما لا يشمله العرض</div>
+        <ul class="styled">
+          <li>ميزانية الإعلانات (تُدفع مباشرة للمنصة)</li>
+          <li>تصوير احترافي للمنتجات</li>
+          <li>SEO كامل (مرحلة لاحقة)</li>
+          <li>رسوم اشتراك منصة سلة أو تطبيقاتها</li>
+          <li>إعلانات Snapchat (مرحلة لاحقة)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>hello@sahab.agency | +905364674194</span>
+    <span>وكالة سحاب — عرض تجديد 2026</span>
+    <span>3 / 6</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 4 — FINANCIAL PROJECTIONS
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">SAHAB</div>
+    <div class="contact">www.sahab.agency &nbsp;|&nbsp; hello@sahab.agency</div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">FINANCIAL PROJECTIONS</div>
+    <div class="section-title">توقعات النمو — بناءً على أرقامك الفعلية</div>
+
+    <p>بناءً على هامش ربح المنتجات (~50%) وبيانات الحملات خلال السنة الأولى، فيما يلي التوقعات الواقعية لمراحل النمو:</p>
+
+    <table>
+      <tr>
+        <th>المرحلة</th>
+        <th>المبيعات الشهرية المتوقعة</th>
+        <th>صافي الربح بعد التسويق</th>
+        <th>المحرّك الرئيسي</th>
+      </tr>
+      <tr>
+        <td class="td-label">الآن — بدون تطوير</td>
+        <td>5,000 – 8,000 ريال</td>
+        <td style="color: var(--red); font-weight: 600;">~1,400 – 2,900 ريال</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td class="td-label">شهر 1–3</td>
+        <td>10,000 – 12,000 ريال</td>
+        <td style="color: var(--green); font-weight: 600;">~2,800 – 3,800 ريال</td>
+        <td>استمرارية الحملات + Cross-sell</td>
+      </tr>
+      <tr>
+        <td class="td-label">شهر 4–6</td>
+        <td>15,000 – 20,000 ريال</td>
+        <td style="color: var(--green); font-weight: 600;">~5,300 – 7,800 ريال</td>
+        <td>UGC + قناة B2B فاعلة</td>
+      </tr>
+      <tr>
+        <td class="td-label">شهر 7–12</td>
+        <td>20,000 – 30,000 ريال</td>
+        <td style="color: var(--green); font-weight: 600;">~7,800 – 12,800 ريال</td>
+        <td>توسع جغرافي + تنويع المنتجات</td>
+      </tr>
+    </table>
+
+    <p class="note">* صافي الربح محسوب بعد خصم: تكلفة المنتجات (50%) + رسوم الوكالة (2,199 ريال) + ميزانية الإعلانات (يدفعها العميل منفصلة).</p>
+
+    <div class="green-box">
+      <strong>مثال واقعي:</strong> عند الوصول إلى 15,000 ريال مبيعات شهرياً في الشهر الرابع — صافي ربحك ~5,800 ريال، مقابل 2,199 ريال رسوم الوكالة. العائد على رسوم التسويق وحدها يبلغ <strong>×2.6</strong>.
+    </div>
+
+    <div class="subsection-title">لماذا السنة الثانية مختلفة؟</div>
+    <div class="two-col">
+      <div class="col-box">
+        <div class="col-box-title">السنة الأولى — تأسيس</div>
+        <ul class="styled">
+          <li>بناء المتجر والمنصات من الصفر</li>
+          <li>اختبار السوق وفهم ما يُحوِّل</li>
+          <li>تجربة حملات وقياس الاستجابة</li>
+          <li>بناء الأدوات والبنية التحتية</li>
+        </ul>
+      </div>
+      <div class="col-box">
+        <div class="col-box-title">السنة الثانية — نمو</div>
+        <ul class="styled">
+          <li>حملات مستمرة بدون تعلم من الصفر</li>
+          <li>محتوى UGC يُجدِّد الإعلانات تلقائياً</li>
+          <li>قناة B2B تُدرّ دخلاً بتكلفة إعلانية أقل</li>
+          <li>بيانات حقيقية تُوجِّه كل قرار</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>hello@sahab.agency | +905364674194</span>
+    <span>وكالة سحاب — عرض تجديد 2026</span>
+    <span>4 / 6</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 5 — INVESTMENT
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">SAHAB</div>
+    <div class="contact">www.sahab.agency &nbsp;|&nbsp; hello@sahab.agency</div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">INVESTMENT</div>
+    <div class="section-title">التسعير المقترح</div>
+
+    <div class="price-hero">
+      <div class="price-label">الباقة الشهرية المُعدَّلة</div>
+      <div class="price-amount">2,199 ريال</div>
+      <div class="price-sub">شهرياً — مُصمَّمة بناءً على مرحلتك الحالية</div>
+      <div class="price-was">الباقة الأساسية الأصلية: 3,299 ريال/شهر</div>
+    </div>
+
+    <table>
+      <tr><th>الخدمة</th><th>التفاصيل</th><th>السعر</th></tr>
+      <tr>
+        <td class="td-label">الباقة الشهرية المُعدَّلة</td>
+        <td>إنستقرام + TikTok + حملة ميتا + UGC + B2B + تقرير شهري</td>
+        <td><strong>2,199 ريال</strong></td>
+      </tr>
+    </table>
+
+    <div class="subsection-title">نظام الخصومات للدفع المُقدَّم</div>
+    <div class="discount-grid">
+      <div class="discount-card">
+        <div class="discount-header">دفع كل 3 أشهر</div>
+        <div class="discount-pct">10%</div>
+        <div class="discount-price">1,979 ريال / شهر</div>
+        <div class="discount-body">
+          <ul class="styled">
+            <li>خطة تسويقية ربع سنوية</li>
+            <li>اجتماع إضافي مجاني</li>
+            <li>بنرَين إضافيَّين للمتجر</li>
+          </ul>
+        </div>
+      </div>
+      <div class="discount-card">
+        <div class="discount-header gold">دفع كل 6 أشهر ⭐</div>
+        <div class="discount-pct">15%</div>
+        <div class="discount-price">1,869 ريال / شهر</div>
+        <div class="discount-body">
+          <ul class="styled">
+            <li>مزايا الـ 3 أشهر كاملة</li>
+            <li>فيديو CGI لمنتج واحد مجاناً</li>
+            <li>خطة إعلانات لستة أشهر</li>
+          </ul>
+        </div>
+      </div>
+      <div class="discount-card">
+        <div class="discount-header">دفع سنوي</div>
+        <div class="discount-pct">20%</div>
+        <div class="discount-price">1,759 ريال / شهر</div>
+        <div class="discount-body">
+          <ul class="styled">
+            <li>مزايا 3 و6 أشهر</li>
+            <li>حملة إعلانية بـ 1,000 ريال 🎁</li>
+            <li>أولوية دعم VIP</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">ملاحظة: الأسعار لا تشمل ميزانية الإعلانات المدفوعة، اشتراك منصة سلة، أو التطبيقات المدفوعة — تُدفع من العميل مباشرةً.</p>
+
+    <div class="alert-box">
+      <strong>ضمان النمو:</strong> مع كل زيادة 5,000 ريال في المبيعات الشهرية، نجلس معاً لمراجعة الباقة وتطويرها. نمو مشروعك هو شرطنا لاستمرار الشراكة.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>hello@sahab.agency | +905364674194</span>
+    <span>وكالة سحاب — عرض تجديد 2026</span>
+    <span>5 / 6</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 6 — POLICY + NEXT STEPS
+══════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="brand">SAHAB</div>
+    <div class="contact">www.sahab.agency &nbsp;|&nbsp; hello@sahab.agency</div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">CLIENT ACCEPTANCE POLICY</div>
+    <div class="section-title">سياسة قبول المشاريع</div>
+
+    <div class="two-col">
+      <div class="col-box">
+        <div class="col-box-title">نعمل مع المشاريع التي:</div>
+        <ul class="styled">
+          <li>تمتلك منتجاً واضحاً وجاهزاً للتسويق</li>
+          <li>تلتزم بمدة تعاون لا تقل عن 3 أشهر</li>
+          <li>تلتزم بنطاق الباقة المختارة</li>
+          <li>تدرك أن النتائج تراكمية وليست فورية</li>
+          <li>تملك شخصاً مخوَّلاً بالتواصل والقرار</li>
+          <li>تُوفِّر ميزانية إعلانية واضحة ومنتظمة</li>
+        </ul>
+      </div>
+      <div class="col-box">
+        <div class="col-box-title">لا نعمل مع:</div>
+        <ul class="styled">
+          <li>من يبحث عن "تجربة شهر"</li>
+          <li>من يُقارن فقط على السعر</li>
+          <li>من يطلب تنفيذاً خارج نطاق الباقة</li>
+          <li>من يتدخل في تفاصيل التنفيذ اليومية</li>
+          <li>من لا يملك ميزانية إعلانية أو رؤية واضحة</li>
+          <li>من يوقف الرصيد الإعلاني بشكل متكرر</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="margin-top: 8px;">عدم القبول لا يعني رفض المشروع، بل عدم توافقه مع مرحلة العمل الحالية. نحن لا نعمل مع أكبر عدد عملاء — نعمل مع العملاء المناسبين لتحقيق نتائج حقيقية.</p>
+
+    <div class="section-eyebrow" style="margin-top: 22px;">NEXT STEPS</div>
+    <div class="section-title">الخطوات التالية</div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">١</div>
+        <div class="step-title">مراجعة العرض</div>
+        <div class="step-body">تواصل معنا بأي استفسار أو تعديل مطلوب</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">٢</div>
+        <div class="step-title">اختيار الدفع</div>
+        <div class="step-body">شهري / ربع سنوي / نصف سنوي</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">٣</div>
+        <div class="step-title">توقيع العقد</div>
+        <div class="step-body">ترسل وكالة سحاب العقد للاعتماد</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">٤</div>
+        <div class="step-title">الانطلاق</div>
+        <div class="step-body">مايو 2026 — نبني، أنت تبيع</div>
+      </div>
+    </div>
+
+    <div class="highlight-box" style="text-align: center; margin-top: 20px;">
+      <p style="font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 6px;">السنة الأولى كانت تأسيساً — السنة الثانية نمو حقيقي وقابل للقياس.</p>
+      <p style="font-size: 12px; color: #5A4A00;">لديكم منتجات حقيقية، وسوق رياضي في تصاعد، وبيانات تُثبت أن الطلب موجود.</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--gray-mid);">
+      <div style="font-size: 13px; color: var(--gray-text);">
+        hello@sahab.agency &nbsp;|&nbsp; +905364674194 &nbsp;|&nbsp; www.sahab.agency
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>hello@sahab.agency | +905364674194</span>
+    <span>وكالة سحاب — عرض تجديد 2026</span>
+    <span>6 / 6</span>
+  </div>
+</div>
+
+</body>
+</html>
