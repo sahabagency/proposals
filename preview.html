@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عرض خدمات — Dippy Drippy | وكالة سحاب</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --espresso: #21130F;
+    --chocolate: #3A241B;
+    --mocha: #6B3F2A;
+    --caramel: #D8923C;
+    --honey: #F3B35A;
+    --cream: #FFF4E4;
+    --blush: #F6B7A7;
+    --soft: #FFF9F0;
+    --border: #ECDCC8;
+    --white: #ffffff;
+    --gray: #8E7B6B;
+    --dark: #1F1714;
+    --green: #8FAE8B;
+  }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: #efe7dc;
+    color: var(--dark);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .page {
+    width: 794px;
+    margin: 24px auto;
+    background: var(--white);
+    box-shadow: 0 4px 24px rgba(60,36,24,0.16);
+    border-radius: 4px;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0 auto; box-shadow: none; border-radius: 0; page-break-after: always; }
+  }
+
+  /* ===== COVER ===== */
+  .cover {
+    background: radial-gradient(circle at 15% 20%, rgba(216,146,60,0.18), transparent 28%), linear-gradient(135deg, var(--espresso), var(--chocolate));
+    min-height: 1120px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover-bg-lines {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 80% 12%, rgba(246,183,167,0.14) 0 90px, transparent 92px),
+      repeating-linear-gradient(90deg, transparent, transparent 58px, rgba(255,255,255,0.025) 58px, rgba(255,255,255,0.025) 59px),
+      repeating-linear-gradient(0deg, transparent, transparent 58px, rgba(255,255,255,0.018) 58px, rgba(255,255,255,0.018) 59px);
+  }
+
+  .cover-drip {
+    position: absolute;
+    top: -90px;
+    left: -60px;
+    width: 390px;
+    height: 360px;
+    background: linear-gradient(180deg, rgba(216,146,60,0.32), rgba(246,183,167,0.08));
+    border-radius: 0 0 160px 120px;
+    transform: rotate(-8deg);
+    filter: blur(0.2px);
+  }
+
+  .cover-drip::after {
+    content: '';
+    position: absolute;
+    bottom: -88px;
+    right: 74px;
+    width: 74px;
+    height: 140px;
+    background: rgba(216,146,60,0.23);
+    border-radius: 0 0 45px 45px;
+  }
+
+  .cover-accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: linear-gradient(90deg, var(--caramel), var(--blush), var(--honey));
+  }
+
+  .cover-header {
+    padding: 44px 52px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+
+  .logo-box { display: flex; flex-direction: column; align-items: flex-end; }
+  .logo-text { font-size: 28px; font-weight: 900; color: var(--white); letter-spacing: 3px; }
+  .logo-sub { font-size: 10px; color: rgba(255,244,228,0.46); letter-spacing: 1px; margin-top: 2px; }
+  .contact-info { text-align: left; color: rgba(255,244,228,0.55); font-size: 11px; line-height: 2; }
+
+  .cover-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 52px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .for-label {
+    font-size: 11px;
+    color: var(--honey);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+
+  .client-name-en {
+    font-size: 50px;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.08;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+  }
+
+  .client-name-ar {
+    font-size: 16px;
+    color: rgba(255,244,228,0.55);
+    margin-bottom: 34px;
+  }
+
+  .cover-divider {
+    width: 58px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--caramel), var(--blush));
+    margin-bottom: 34px;
+  }
+
+  .services-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 52px; max-width: 560px; }
+
+  .pill {
+    background: rgba(216,146,60,0.15);
+    border: 1px solid rgba(243,179,90,0.30);
+    color: #FFD79D;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+
+  .cover-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: auto;
+  }
+
+  .meta-item {
+    border: 1px solid rgba(255,244,228,0.10);
+    background: rgba(0,0,0,0.14);
+    padding: 12px 14px;
+    border-radius: 6px;
+  }
+
+  .meta-label { font-size: 10px; color: rgba(255,244,228,0.34); letter-spacing: 1px; margin-bottom: 2px; }
+  .meta-val { font-size: 12px; color: rgba(255,244,228,0.78); font-weight: 800; }
+
+  .cover-footer {
+    padding: 24px 52px;
+    background: rgba(0,0,0,0.30);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-footer span { font-size: 11px; color: rgba(255,244,228,0.35); }
+  .valid-badge {
+    background: rgba(216,146,60,0.15);
+    border: 1px solid rgba(243,179,90,0.35);
+    color: #FFD79D;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  /* ===== PAGE HEADER ===== */
+  .page-header {
+    background: var(--espresso);
+    padding: 20px 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--caramel);
+  }
+
+  .page-header .logo-small { font-size: 17px; font-weight: 900; color: var(--white); letter-spacing: 2px; }
+  .page-header .page-info { font-size: 11px; color: rgba(255,244,228,0.48); }
+
+  /* ===== CONTENT ===== */
+  .content { padding: 44px 52px; min-height: 990px; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--caramel);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .section-title { font-size: 22px; font-weight: 900; color: var(--espresso); margin-bottom: 6px; }
+  .section-line { width: 42px; height: 3px; background: linear-gradient(90deg, var(--caramel), var(--blush)); margin-bottom: 24px; }
+
+  .brief-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 28px; }
+  .brief-item {
+    background: var(--soft);
+    border: 1px solid var(--border);
+    border-right: 4px solid var(--caramel);
+    padding: 14px 18px;
+    border-radius: 5px;
+  }
+  .brief-item .label { font-size: 10px; color: var(--gray); letter-spacing: 1.5px; font-weight: 800; margin-bottom: 4px; }
+  .brief-item .value { font-size: 13.2px; font-weight: 800; color: var(--espresso); }
+
+  .intro-box {
+    background: linear-gradient(135deg, var(--espresso), var(--chocolate));
+    color: rgba(255,244,228,0.86);
+    padding: 20px 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.95;
+    margin-bottom: 30px;
+    border-right: 5px solid var(--caramel);
+  }
+
+  .target-grid, .req-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 32px; }
+  .req-grid { grid-template-columns: 1fr 1fr 1fr; }
+
+  .target-item, .req-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--soft);
+    border: 1px solid var(--border);
+    padding: 11px 16px;
+    border-radius: 5px;
+    font-size: 12.5px;
+    color: #4B3428;
+  }
+  .target-item::before, .req-item::before { content: '◆'; color: var(--caramel); font-size: 8px; flex-shrink: 0; }
+
+  .visual-dir { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 24px; }
+  .vd-item {
+    background: var(--espresso);
+    text-align: center;
+    padding: 18px 10px;
+    border-radius: 6px;
+    border-bottom: 4px solid var(--caramel);
+  }
+  .vd-ar { font-size: 14px; font-weight: 800; color: var(--white); margin-bottom: 4px; }
+  .vd-en { font-size: 10px; color: rgba(255,244,228,0.45); letter-spacing: 1px; }
+
+  .colors-row { display: flex; gap: 10px; margin-bottom: 32px; align-items: center; }
+  .color-swatch { width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0; border: 1px solid rgba(0,0,0,0.06); }
+  .color-label { font-size: 11px; color: var(--gray); }
+
+  .scope-block { margin-bottom: 24px; }
+  .scope-block-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--espresso);
+    color: var(--white);
+    padding: 13px 20px;
+    font-size: 13.5px;
+    font-weight: 800;
+    border-radius: 6px 6px 0 0;
+  }
+  .scope-block-title .num {
+    background: var(--caramel);
+    color: var(--espresso);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .scope-block-title .en-tag { font-size: 11px; color: #FFD79D; margin-right: auto; font-weight: 500; }
+
+  .scope-items { border: 1px solid var(--border); border-top: none; border-radius: 0 0 6px 6px; overflow: hidden; }
+  .scope-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12.5px;
+    color: #4B3428;
+  }
+  .scope-item:last-child { border-bottom: none; }
+  .scope-item:nth-child(even) { background: var(--soft); }
+  .scope-item::before { content: '✓'; color: var(--caramel); font-weight: 900; flex-shrink: 0; }
+
+  .deliverables-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 32px; }
+  .deliv-card { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .deliv-head {
+    background: var(--espresso);
+    padding: 12px 16px;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--white);
+    border-bottom: 3px solid var(--caramel);
+  }
+  .deliv-body { padding: 12px 16px; background: var(--soft); list-style: none; }
+  .deliv-body li {
+    font-size: 11.5px;
+    color: #4B3428;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+    padding-right: 12px;
+    position: relative;
+  }
+  .deliv-body li:last-child { border-bottom: none; }
+  .deliv-body li::before { content: '—'; position: absolute; right: 0; color: var(--caramel); font-size: 10px; }
+
+  .pricing-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; overflow: hidden; border-radius: 6px; }
+  .pricing-table thead tr { background: var(--espresso); color: var(--white); }
+  .pricing-table th { padding: 14px 18px; text-align: right; font-size: 12px; font-weight: 800; }
+  .pricing-table td { padding: 14px 18px; font-size: 13px; border-bottom: 1px solid var(--border); color: #4B3428; vertical-align: top; }
+  .pricing-table tr:nth-child(even) td { background: var(--soft); }
+  .pricing-table tr.total td { background: var(--espresso); color: var(--white); font-weight: 900; font-size: 15px; border-bottom: none; }
+  .price-val { font-weight: 900; color: var(--espresso); white-space: nowrap; }
+  .price-val.big { color: var(--honey); font-size: 16px; }
+
+  .note-box {
+    background: #FFF4E4;
+    border: 1px solid #EBCB9A;
+    border-right: 5px solid var(--caramel);
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    color: #5A351F;
+    margin-bottom: 24px;
+    line-height: 1.85;
+  }
+
+  .payment-steps { display: grid; grid-template-columns: repeat(4, 1fr); margin-bottom: 32px; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .payment-step { text-align: center; padding: 18px 10px; border-left: 1px solid var(--border); background: var(--white); }
+  .payment-step:last-child { border-left: none; }
+  .payment-step .ps-pct { font-size: 22px; font-weight: 900; color: var(--caramel); }
+  .payment-step .ps-amount { font-size: 12.5px; font-weight: 900; color: var(--espresso); margin: 3px 0; }
+  .payment-step .ps-when { font-size: 10.5px; color: var(--gray); line-height: 1.55; }
+
+  .timeline { display: flex; margin-bottom: 32px; }
+  .tl-item { flex: 1; text-align: center; position: relative; }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 50%;
+    left: -50%;
+    height: 2px;
+    background: var(--border);
+    z-index: 0;
+  }
+  .tl-item:first-child::before { display: none; }
+  .tl-dot {
+    width: 36px;
+    height: 36px;
+    background: var(--caramel);
+    color: var(--espresso);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 900;
+    margin: 0 auto 10px;
+    position: relative;
+    z-index: 1;
+  }
+  .tl-title { font-size: 12px; font-weight: 800; color: var(--espresso); margin-bottom: 3px; }
+  .tl-dur { font-size: 10.5px; color: var(--gray); }
+
+  .steps { display: flex; gap: 0; margin-bottom: 32px; }
+  .step { flex: 1; text-align: center; padding: 20px 12px; border: 1px solid var(--border); border-left: none; }
+  .step:first-child { border-left: 1px solid var(--border); border-radius: 0 6px 6px 0; }
+  .step:last-child { border-radius: 6px 0 0 6px; }
+  .step .s-num {
+    width: 32px;
+    height: 32px;
+    background: var(--espresso);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 900;
+    margin: 0 auto 10px;
+  }
+  .step .s-title { font-size: 12px; font-weight: 800; color: var(--espresso); margin-bottom: 4px; }
+  .step .s-sub { font-size: 10.5px; color: var(--gray); }
+
+  .page-footer {
+    background: var(--espresso);
+    padding: 16px 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 3px solid var(--caramel);
+  }
+  .page-footer span { font-size: 11px; color: rgba(255,244,228,0.36); }
+  .footer-contact { font-size: 11px; color: rgba(255,244,228,0.52); text-align: left; }
+  .page-num { font-size: 11px; color: rgba(255,244,228,0.28); }
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE 1: COVER ===== -->
+<div class="page">
+  <div class="cover">
+    <div class="cover-bg-lines"></div>
+    <div class="cover-drip"></div>
+    <div class="cover-accent"></div>
+
+    <div class="cover-header">
+      <div class="contact-info">
+        www.sahab.agency<br>
+        hello@sahab.agency<br>
+        @sahabagency
+      </div>
+      <div class="logo-box">
+        <div class="logo-text">SAHAB</div>
+        <div class="logo-sub">وكالة سحاب للتسويق وبناء العلامات التجارية</div>
+      </div>
+    </div>
+
+    <div class="cover-body">
+      <div class="for-label">عرض خدمات — مُعدّ خصيصاً لـ</div>
+      <div class="client-name-en">Dippy<br>Drippy</div>
+      <div class="client-name-ar">Sweets & Coffee — Brand Development & Digital Marketing Partnership</div>
+      <div class="cover-divider"></div>
+
+      <div class="services-pills">
+        <div class="pill">تطوير العلامة التجارية</div>
+        <div class="pill">الهوية البصرية الكاملة</div>
+        <div class="pill">تجهيز المنيو والمنتجات</div>
+        <div class="pill">المنيو الإلكتروني</div>
+        <div class="pill">التسويق الرقمي السنوي</div>
+      </div>
+
+      <div class="cover-meta">
+        <div class="meta-item">
+          <div class="meta-label">التاريخ</div>
+          <div class="meta-val">مايو 2026</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">مدة التأسيس</div>
+          <div class="meta-val">4 – 6 أسابيع</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">مدة التسويق</div>
+          <div class="meta-val">عقد سنوي</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">الدفعة الأولى</div>
+          <div class="meta-val">$23,000</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-footer">
+      <div class="valid-badge">صالح لمدة 7 أيام من تاريخ الإرسال</div>
+      <span>هذا العرض سري وخاص بـ Dippy Drippy</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE 2: BRIEF ===== -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-info">عرض خدمات 2026 — 2/7</div>
+    <div class="logo-small">SAHAB</div>
+  </div>
+  <div class="content">
+    <div class="section-label">PROJECT BRIEF</div>
+    <div class="section-title">بريف المشروع</div>
+    <div class="section-line"></div>
+
+    <div class="brief-grid">
+      <div class="brief-item">
+        <div class="label">اسم المشروع</div>
+        <div class="value">Dippy Drippy</div>
+      </div>
+      <div class="brief-item">
+        <div class="label">نوع النشاط</div>
+        <div class="value">Sweets & Coffee / حلويات وقهوة</div>
+      </div>
+      <div class="brief-item">
+        <div class="label">مرحلة المشروع</div>
+        <div class="value">موقع فعلي منفذ — يحتاج بناء علامة وتسويق</div>
+      </div>
+      <div class="brief-item">
+        <div class="label">هدف العرض</div>
+        <div class="value">Brand Rescue + Launch + Annual Marketing</div>
+      </div>
+    </div>
+
+    <div class="intro-box">
+      بعد الاجتماع ومراجعة الوضع الحالي، المشروع لديه موقع فعلي وتصميم داخلي منفذ، لكن المرحلة الأهم الآن هي بناء هوية تجارية أقوى تربط الاسم، التجربة، المنتجات، المنيو، التغليف، والسوشيال ميديا في منظومة واحدة قابلة للتسويق. دور وكالة سحاب ليس إعادة بناء المحل من الصفر، بل تحويل Dippy Drippy من محل حلويات وقهوة إلى علامة تجارية واضحة، شهية، سهلة التصوير، وأسهل في البيع.
+    </div>
+
+    <div class="section-label">CURRENT OPPORTUNITY</div>
+    <div class="section-title">الفرصة الحالية</div>
+    <div class="section-line"></div>
+
+    <div class="target-grid">
+      <div class="target-item">الاسم يحمل فرصة قوية لفكرة الـ Dip / Drip / Sauce</div>
+      <div class="target-item">المحل جاهز بصرياً ويحتاج طبقة براند وتسويق فوق الموجود</div>
+      <div class="target-item">المنتجات تحتاج أسماء ووصف وتسعير بطريقة قابلة للبيع</div>
+      <div class="target-item">التغليف والمنيو والسوشيال ميديا يحتاجون لغة واحدة</div>
+      <div class="target-item">المشروع قابل للتحول إلى وجهة تصوير ومشاركة</div>
+      <div class="target-item">السوق الأمريكي يحتاج براند واضح وسريع الفهم</div>
+    </div>
+
+    <div class="section-label">TARGET AUDIENCE</div>
+    <div class="section-title">الجمهور المستهدف</div>
+    <div class="section-line"></div>
+
+    <div class="target-grid">
+      <div class="target-item">سكان المنطقة القريبون من الفرع</div>
+      <div class="target-item">العائلات ومحبو الحلويات</div>
+      <div class="target-item">طلاب وشباب يبحثون عن تجربة تصوير</div>
+      <div class="target-item">محبو القهوة والمشروبات الباردة</div>
+      <div class="target-item">عملاء التيك أواي والديليفري</div>
+      <div class="target-item">الجالية العربية والعملاء المحليون في نيويورك</div>
+      <div class="target-item">الزوار الباحثون عن أماكن Instagrammable</div>
+      <div class="target-item">طلبات المناسبات والصناديق العائلية</div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="footer-contact">Mohammed Gazea | Sahab Agency | hello@sahab.agency</div>
+    <span>وكالة سحاب — عرض خدمات 2026</span>
+    <div class="page-num">2 / 7</div>
+  </div>
+</div>
+
+<!-- ===== PAGE 3: BRAND DIRECTION ===== -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-info">عرض خدمات 2026 — 3/7</div>
+    <div class="logo-small">SAHAB</div>
+  </div>
+  <div class="content">
+    <div class="section-label">BRAND DIRECTION</div>
+    <div class="section-title">الاتجاه المقترح للعلامة التجارية</div>
+    <div class="section-line"></div>
+
+    <div class="intro-box">
+      الاتجاه المقترح للبراند يعتمد على تحويل معنى الاسم إلى تجربة ملموسة: الصوص، الذوبان، الغمس، الشوكولاتة، الكراميل، والقهوة. الفكرة ليست أن يكون المكان فخماً فقط، بل أن يكون Craveable — يشجع العميل أن يطلب، يصور، يشارك، ويرجع مرة ثانية.
+    </div>
+
+    <div class="visual-dir">
+      <div class="vd-item"><div class="vd-ar">شهي</div><div class="vd-en">Craveable</div></div>
+      <div class="vd-item"><div class="vd-ar">مرح</div><div class="vd-en">Playful</div></div>
+      <div class="vd-item"><div class="vd-ar">قابل للتصوير</div><div class="vd-en">Instagrammable</div></div>
+      <div class="vd-item"><div class="vd-ar">بريميوم بسيط</div><div class="vd-en">Premium Casual</div></div>
+    </div>
+
+    <div class="colors-row">
+      <div class="color-swatch" style="background:#21130F;"></div>
+      <div class="color-swatch" style="background:#6B3F2A;"></div>
+      <div class="color-swatch" style="background:#D8923C;"></div>
+      <div class="color-swatch" style="background:#FFF4E4;"></div>
+      <div class="color-swatch" style="background:#F6B7A7;"></div>
+      <div class="color-label">ألوان دافئة وشهية تعكس الشوكولاتة، الكراميل، القهوة، والكريمة — يتم اعتمادها نهائياً بعد مرحلة الهوية.</div>
+    </div>
+
+    <div class="section-label">SCOPE OF WORK</div>
+    <div class="section-title">نطاق العمل — التأسيس والبراندينج</div>
+    <div class="section-line"></div>
+
+    <div class="scope-block">
+      <div class="scope-block-title">
+        <div class="num">١</div>
+        استراتيجية العلامة التجارية
+        <span class="en-tag">Brand Strategy</span>
+      </div>
+      <ul class="scope-items">
+        <li class="scope-item">تحليل الوضع الحالي للعلامة والمحل والتجربة</li>
+        <li class="scope-item">تحديد Brand Positioning المناسب للسوق الأمريكي</li>
+        <li class="scope-item">بناء Brand Story مرتبطة باسم Dippy Drippy</li>
+        <li class="scope-item">تحديد شخصية البراند ونبرة التواصل</li>
+        <li class="scope-item">تحديد الرسائل التسويقية الأساسية</li>
+        <li class="scope-item">اقتراح Taglines وعبارات قابلة للاستخدام في الحملات</li>
+      </ul>
+    </div>
+
+    <div class="scope-block">
+      <div class="scope-block-title">
+        <div class="num">٢</div>
+        الهوية البصرية الكاملة
+        <span class="en-tag">Visual Identity</span>
+      </div>
+      <ul class="scope-items">
+        <li class="scope-item">تطوير أو إعادة تصميم الشعار بشكل احترافي</li>
+        <li class="scope-item">نسخ متعددة للشعار: رئيسية، أفقية، مختصرة، أيقونة</li>
+        <li class="scope-item">تحديد الألوان والخطوط والنمط البصري</li>
+        <li class="scope-item">تصميم عناصر Drip / Dip / Sauce كجزء من الهوية</li>
+        <li class="scope-item">تجهيز قوالب سوشيال ميديا أولية</li>
+        <li class="scope-item">Brand Guidelines مبسط للاستخدام المستقبلي</li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="footer-contact">Mohammed Gazea | Sahab Agency | hello@sahab.agency</div>
+    <span>وكالة سحاب — عرض خدمات 2026</span>
+    <div class="page-num">3 / 7</div>
+  </div>
+</div>
+
+<!-- ===== PAGE 4: MENU + DIGITAL MENU ===== -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-info">عرض خدمات 2026 — 4/7</div>
+    <div class="logo-small">SAHAB</div>
+  </div>
+  <div class="content">
+    <div class="section-label">MENU & PRODUCT DEVELOPMENT</div>
+    <div class="section-title">تجهيز المنتجات والمنيو والأسعار</div>
+    <div class="section-line"></div>
+
+    <div class="scope-block">
+      <div class="scope-block-title">
+        <div class="num">٣</div>
+        تطوير المنيو والمنتجات
+        <span class="en-tag">Menu Development</span>
+      </div>
+      <ul class="scope-items">
+        <li class="scope-item">مراجعة المنتجات الحالية وتقسيمها بطريقة تجارية واضحة</li>
+        <li class="scope-item">ترتيب أقسام المنيو: Coffee, Waffles, Crepes, Ice Cream, Drinks, Signature Items</li>
+        <li class="scope-item">اقتراح منتجات Signature مرتبطة بفكرة Dippy / Drippy</li>
+        <li class="scope-item">كتابة أسماء جذابة للمنتجات ووصف احترافي قابل للبيع</li>
+        <li class="scope-item">مراجعة الأسعار مع العميل وربطها بالربحية والقيمة المدركة</li>
+        <li class="scope-item">بناء Combos, Add-ons, Upsells لرفع متوسط قيمة الطلب</li>
+      </ul>
+    </div>
+
+    <div class="scope-block">
+      <div class="scope-block-title">
+        <div class="num">٤</div>
+        المنيو الإلكتروني
+        <span class="en-tag">QR / Digital Menu</span>
+      </div>
+      <ul class="scope-items">
+        <li class="scope-item">تصميم صفحة منيو إلكتروني متوافقة مع الجوال</li>
+        <li class="scope-item">تقسيم المنتجات داخل المنيو بطريقة سهلة وسريعة</li>
+        <li class="scope-item">إضافة الأسعار والوصف وخيارات الإضافات والكمبوهات</li>
+        <li class="scope-item">تصميم QR Code قابل للطباعة على الطاولات والتغليف</li>
+        <li class="scope-item">ربط التصميم بالهوية الجديدة للعلامة</li>
+        <li class="scope-item">تجهيز هيكل قابل للتحديث مستقبلاً عند تغيير المنتجات أو الأسعار</li>
+      </ul>
+    </div>
+
+    <div class="section-label">SAMPLE PRODUCT DIRECTIONS</div>
+    <div class="section-title">أمثلة لاتجاه أسماء المنتجات</div>
+    <div class="section-line"></div>
+
+    <div class="target-grid">
+      <div class="target-item">Drippy Waffle</div>
+      <div class="target-item">Dippy Box</div>
+      <div class="target-item">Chocolate Dip Crepe</div>
+      <div class="target-item">Caramel Drip Cup</div>
+      <div class="target-item">Signature Dippy Latte</div>
+      <div class="target-item">Build Your Drip</div>
+      <div class="target-item">Kids Dippy Meal</div>
+      <div class="target-item">Family Sweet Box</div>
+    </div>
+
+    <div class="note-box">
+      الهدف من تطوير المنيو ليس فقط ترتيب المنتجات، بل بناء قائمة تساعد في البيع: أسماء أسهل، وصف أشهى، إضافات واضحة، عروض قابلة للتسويق، ومنتجات Signature تسهل تمييز Dippy Drippy عن المنافسين.
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="footer-contact">Mohammed Gazea | Sahab Agency | hello@sahab.agency</div>
+    <span>وكالة سحاب — عرض خدمات 2026</span>
+    <div class="page-num">4 / 7</div>
+  </div>
+</div>
+
+<!-- ===== PAGE 5: MARKETING SCOPE ===== -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-info">عرض خدمات 2026 — 5/7</div>
+    <div class="logo-small">SAHAB</div>
+  </div>
+  <div class="content">
+    <div class="section-label">DIGITAL MARKETING</div>
+    <div class="section-title">التسويق الرقمي والإدارة السنوية</div>
+    <div class="section-line"></div>
+
+    <div class="intro-box">
+      التسويق لمشروع مثل Dippy Drippy لا ينجح كعمل مؤقت أو منشورات متفرقة. المطلوب هو بناء حضور مستمر يربط المنتجات، العروض، المحتوى، التقييمات، الإعلانات، وتجربة العميل داخل الفرع. لذلك يكون العمل التسويقي بعقد سنوي، مع دفع كل 3 أشهر مقدماً.
+    </div>
+
+    <div class="scope-block">
+      <div class="scope-block-title">
+        <div class="num">٥</div>
+        تجهيز الحسابات والإطلاق
+        <span class="en-tag">Setup & Launch</span>
+      </div>
+      <ul class="scope-items">
+        <li class="scope-item">تحسين Instagram و TikTok وتوحيد شكل الحسابات</li>
+        <li class="scope-item">تحسين Google Business Profile وتجهيز استراتيجية التقييمات</li>
+        <li class="scope-item">تجهيز Meta Business Manager والحسابات الإعلانية</li>
+        <li class="scope-item">تجهيز اتجاه المحتوى وLaunch Campaign</li>
+        <li class="scope-item">اقتراح عروض افتتاح / Soft Relaunch حسب جاهزية التشغيل</li>
+        <li class="scope-item">تجهيز الرسائل الأساسية للحملات والإعلانات</li>
+      </ul>
+    </div>
+
+    <div class="scope-block">
+      <div class="scope-block-title">
+        <div class="num">٦</div>
+        الإدارة التسويقية الشهرية
+        <span class="en-tag">Annual Marketing Retainer</span>
+      </div>
+      <ul class="scope-items">
+        <li class="scope-item">خطة محتوى شهرية لمنصات Instagram و TikTok</li>
+        <li class="scope-item">كتابة المحتوى والأفكار والهوكات والـ Captions</li>
+        <li class="scope-item">تصميم منشورات وقوالب بناءً على الهوية الجديدة</li>
+        <li class="scope-item">أفكار Reels و TikTok Scripts قابلة للتصوير والتنفيذ</li>
+        <li class="scope-item">إدارة الحملات الإعلانية ومتابعة الأداء</li>
+        <li class="scope-item">اقتراح عروض شهرية ومواسم تسويقية</li>
+        <li class="scope-item">تحسين Google Business والتقييمات بشكل مستمر</li>
+        <li class="scope-item">تقرير شهري + اجتماع مراجعة أداء شهري</li>
+      </ul>
+    </div>
+
+    <div class="section-label">MONTHLY OUTPUT</div>
+    <div class="section-title">المخرجات الشهرية المقترحة</div>
+    <div class="section-line"></div>
+
+    <div class="deliverables-grid">
+      <div class="deliv-card">
+        <div class="deliv-head">المحتوى</div>
+        <ul class="deliv-body">
+          <li>12–16 منشور شهرياً</li>
+          <li>8–12 فكرة Reels / TikTok</li>
+          <li>Stories حسب توفر المواد</li>
+          <li>كتابة الكابشن والهوكات</li>
+        </ul>
+      </div>
+      <div class="deliv-card">
+        <div class="deliv-head">الإعلانات</div>
+        <ul class="deliv-body">
+          <li>إدارة Meta Ads / TikTok Ads</li>
+          <li>اقتراح ميزانية شهرية</li>
+          <li>اختبار رسائل وعروض مختلفة</li>
+          <li>متابعة الأداء والتحسين</li>
+        </ul>
+      </div>
+      <div class="deliv-card">
+        <div class="deliv-head">النمو</div>
+        <ul class="deliv-body">
+          <li>Google Reviews Strategy</li>
+          <li>اقتراح عروض شهرية</li>
+          <li>تطوير أفكار منتجات</li>
+          <li>تقرير واجتماع شهري</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="footer-contact">Mohammed Gazea | Sahab Agency | hello@sahab.agency</div>
+    <span>وكالة سحاب — عرض خدمات 2026</span>
+    <div class="page-num">5 / 7</div>
+  </div>
+</div>
+
+<!-- ===== PAGE 6: PRICING ===== -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-info">عرض خدمات 2026 — 6/7</div>
+    <div class="logo-small">SAHAB</div>
+  </div>
+  <div class="content">
+    <div class="section-label">INVESTMENT</div>
+    <div class="section-title">العرض السعري المقترح</div>
+    <div class="section-line"></div>
+
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>الخدمة</th>
+          <th>التفاصيل</th>
+          <th>السعر</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Brand Strategy & Visual Identity</strong><br><span style="font-size:11px;color:#8E7B6B;">الاستراتيجية والهوية البصرية</span></td>
+          <td>استراتيجية البراند + Brand Story + الشعار + الألوان + الخطوط + النمط البصري + Brand Guidelines + قوالب أولية</td>
+          <td class="price-val">$7,500</td>
+        </tr>
+        <tr>
+          <td><strong>Menu Development & Digital Menu</strong><br><span style="font-size:11px;color:#8E7B6B;">تطوير المنيو والمنتجات</span></td>
+          <td>ترتيب المنتجات + أسماء ووصف + Combos + مراجعة الأسعار + تصميم المنيو الإلكتروني + QR Menu</td>
+          <td class="price-val">$3,000</td>
+        </tr>
+        <tr>
+          <td><strong>Launch Setup</strong><br><span style="font-size:11px;color:#8E7B6B;">تجهيز الإطلاق والحسابات</span></td>
+          <td>تحسين الحسابات + Google Business + الحسابات الإعلانية + رسائل الإطلاق + Campaign Direction</td>
+          <td class="price-val">$2,000</td>
+        </tr>
+        <tr class="total">
+          <td colspan="2"><strong>One-Time Brand & Launch Setup Total</strong></td>
+          <td><span class="price-val big">$12,500</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>الخدمة السنوية</th>
+          <th>التفاصيل</th>
+          <th>السعر</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Annual Digital Marketing Management</strong><br><span style="font-size:11px;color:#8E7B6B;">إدارة التسويق الرقمي السنوية</span></td>
+          <td>إدارة المحتوى + الحملات الإعلانية + العروض الشهرية + Google Business + التقارير + الاجتماعات + التطوير المستمر</td>
+          <td class="price-val">$3,500 / شهر</td>
+        </tr>
+        <tr class="total">
+          <td colspan="2"><strong>Annual Marketing Contract Value</strong></td>
+          <td><span class="price-val big">$42,000 / سنة</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-label">FIRST PAYMENT</div>
+    <div class="section-title">الدفعة الأولى لبدء المشروع</div>
+    <div class="section-line"></div>
+
+    <table class="pricing-table">
+      <tbody>
+        <tr>
+          <td><strong>Brand & Launch Setup</strong></td>
+          <td>دفعة المشروع التأسيسي مرة واحدة</td>
+          <td class="price-val">$12,500</td>
+        </tr>
+        <tr>
+          <td><strong>First 3 Months Marketing Retainer</strong></td>
+          <td>أول 3 أشهر من عقد التسويق السنوي</td>
+          <td class="price-val">$10,500</td>
+        </tr>
+        <tr class="total">
+          <td colspan="2"><strong>Total First Payment</strong></td>
+          <td><span class="price-val big">$23,000</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note-box">
+      عقد التسويق الرقمي سنوي لمدة 12 شهر، والدفع كل 3 أشهر مقدماً. ميزانية الإعلانات، التصوير الاحترافي، إنتاج الفيديو، الطباعة، التغليف، تكاليف المنصات، أو أي تكاليف خارجية لا تدخل ضمن هذا السعر ويتم الاتفاق عليها بشكل منفصل.
+    </div>
+
+    <div class="section-label">PAYMENT SCHEDULE</div>
+    <div class="section-title">جدول الدفع</div>
+    <div class="section-line"></div>
+
+    <div class="payment-steps">
+      <div class="payment-step">
+        <div class="ps-pct">Start</div>
+        <div class="ps-amount">$23,000</div>
+        <div class="ps-when">عند اعتماد العرض<br>Setup + أول 3 أشهر</div>
+      </div>
+      <div class="payment-step">
+        <div class="ps-pct">Q2</div>
+        <div class="ps-amount">$10,500</div>
+        <div class="ps-when">بعد 3 أشهر<br>دفعة التسويق التالية</div>
+      </div>
+      <div class="payment-step">
+        <div class="ps-pct">Q3</div>
+        <div class="ps-amount">$10,500</div>
+        <div class="ps-when">بعد 6 أشهر<br>دفعة التسويق التالية</div>
+      </div>
+      <div class="payment-step">
+        <div class="ps-pct">Q4</div>
+        <div class="ps-amount">$10,500</div>
+        <div class="ps-when">بعد 9 أشهر<br>دفعة التسويق الأخيرة</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="footer-contact">Mohammed Gazea | Sahab Agency | hello@sahab.agency</div>
+    <span>وكالة سحاب — عرض خدمات 2026</span>
+    <div class="page-num">6 / 7</div>
+  </div>
+</div>
+
+<!-- ===== PAGE 7: TIMELINE + NEXT STEPS ===== -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-info">عرض خدمات 2026 — 7/7</div>
+    <div class="logo-small">SAHAB</div>
+  </div>
+  <div class="content">
+    <div class="section-label">TIMELINE</div>
+    <div class="section-title">مدة التنفيذ المتوقعة: 4 إلى 6 أسابيع للتأسيس</div>
+    <div class="section-line"></div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot">١</div>
+        <div class="tl-title">Kickoff</div>
+        <div class="tl-dur">الأسبوع 1</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">٢</div>
+        <div class="tl-title">Brand Strategy</div>
+        <div class="tl-dur">الأسبوع 1–2</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">٣</div>
+        <div class="tl-title">Visual Identity</div>
+        <div class="tl-dur">الأسبوع 2–4</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">٤</div>
+        <div class="tl-title">Menu & QR</div>
+        <div class="tl-dur">الأسبوع 3–5</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">٥</div>
+        <div class="tl-title">Launch Setup</div>
+        <div class="tl-dur">الأسبوع 5–6</div>
+      </div>
+    </div>
+
+    <div class="section-label">REQUIREMENTS</div>
+    <div class="section-title">ما نحتاجه منكم للبدء</div>
+    <div class="section-line"></div>
+
+    <div class="req-grid">
+      <div class="req-item">الوصول للحسابات الاجتماعية الحالية</div>
+      <div class="req-item">الوصول إلى Google Business Profile</div>
+      <div class="req-item">قائمة المنتجات الحالية</div>
+      <div class="req-item">تكلفة المنتجات وهوامش الربح إن وجدت</div>
+      <div class="req-item">أسعار المنافسين أو المنتجات المشابهة</div>
+      <div class="req-item">صور الموقع والتصميم الحالي</div>
+      <div class="req-item">ملفات الشعار الحالية إن وجدت</div>
+      <div class="req-item">أي صور منتجات أو فيديوهات متوفرة</div>
+      <div class="req-item">صلاحية اعتماد نهائي من صاحب القرار</div>
+    </div>
+
+    <div class="section-label">NEXT STEPS</div>
+    <div class="section-title">الخطوات التالية</div>
+    <div class="section-line"></div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="s-num">١</div>
+        <div class="s-title">مراجعة العرض</div>
+        <div class="s-sub">مراجعة النطاق والسعر والمدة</div>
+      </div>
+      <div class="step">
+        <div class="s-num">٢</div>
+        <div class="s-title">اعتماد العرض</div>
+        <div class="s-sub">تأكيد الموافقة وتحديد موعد الكيك أوف</div>
+      </div>
+      <div class="step">
+        <div class="s-num">٣</div>
+        <div class="s-title">توقيع العقد</div>
+        <div class="s-sub">عقد تسويق سنوي ودفع كل 3 أشهر</div>
+      </div>
+      <div class="step">
+        <div class="s-num">٤</div>
+        <div class="s-title">بدء التنفيذ</div>
+        <div class="s-sub">نبدأ التأسيس والإطلاق</div>
+      </div>
+    </div>
+
+    <div style="background: linear-gradient(135deg, var(--espresso), var(--chocolate)); border-radius: 8px; padding: 38px 42px; text-align: center; margin-top: 16px; position: relative; overflow: hidden;">
+      <div style="position:absolute; bottom:0; left:0; right:0; height:4px; background: linear-gradient(90deg, #D8923C, #F6B7A7, #F3B35A);"></div>
+      <div style="font-size: 17px; font-weight: 900; color: #fff; margin-bottom: 10px; line-height: 1.7;">
+        Dippy Drippy يحتاج علامة تجارية تُباع قبل أن تُشرح.
+      </div>
+      <div style="font-size: 13px; color: rgba(255,244,228,0.58); margin-bottom: 24px; line-height:1.8;">
+        هدفنا أن نجعل الاسم، المنيو، التغليف، المحتوى، والإعلانات تعمل معاً كمنظومة واحدة — لا كعناصر منفصلة.
+      </div>
+      <div style="font-size: 12px; color: #FFD79D; font-weight: 700; letter-spacing: 0.4px;">
+        Mohammed Gazea &nbsp;|&nbsp; Sahab Agency &nbsp;|&nbsp; hello@sahab.agency
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="footer-contact">Mohammed Gazea | Sahab Agency | hello@sahab.agency</div>
+    <span>وكالة سحاب — عرض خدمات 2026</span>
+    <div class="page-num">7 / 7</div>
+  </div>
+</div>
+
+</body>
+</html>
