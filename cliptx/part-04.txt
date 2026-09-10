@@ -1,0 +1,81 @@
+="kpi-top">Monetization</div><div class="kpi-body"><p style="font-size:13px; color:var(--muted);">paywall_view · trial_start · subscription_start · renewal · cancel</p></div></div>
+    <div class="kpi-card"><div class="kpi-top">Reactivation</div><div class="kpi-body"><p style="font-size:13px; color:var(--muted);">push_open · deep_link_open · session_return · dormant_reactivated</p></div></div>
+  </div>
+</section>
+
+<!-- 04 MEASUREMENT -->
+<section id="measure" class="band-navy">
+  <div class="section-head">
+    <div class="num-badge">04</div>
+    <div>
+      <h2>القياس والتحليلات وAttribution</h2>
+      <p>Measurement & Attribution</p>
+    </div>
+  </div>
+  <p class="lead">قبل التوسع في الصرف، يجب أن نعرف بدقة نسبية من أين يأتي المستخدم، وماذا يفعل بعد التثبيت، وأي قناة تجلب سلوكًا أفضل. على iOS لا يوجد Attribution كامل لكل مستخدم بسبب قيود الخصوصية، لذلك سنبني نظام قياس واقعي يجمع بين بيانات المنتج وبيانات المنصات وقياس Apple.</p>
+
+  <div class="plist">
+    <div class="prow"><div class="label">مراجعة الـ Stack الحالي</div><div class="desc">GA4 / Firebase أو النظام التحليلي الموجود، بدل افتراض أن البنية الحالية صحيحة.</div></div>
+    <div class="prow"><div class="label">Event Map موحّد</div><div class="desc">من Install إلى Subscription، مع naming convention وproperties واضحة.</div></div>
+    <div class="prow"><div class="label">ربط الأحداث بالمنصات</div><div class="desc">ربط App Events مع المنصات الإعلانية المناسبة، وتدقيق deduplication وجودة الإرسال.</div></div>
+    <div class="prow"><div class="label">Apple Ads Attribution</div><div class="desc">إعداد attribution وقياس AdAttributionKit / SKAdNetwork حسب البنية المتاحة.</div></div>
+    <div class="prow"><div class="label">ATT & Privacy</div><div class="desc">مراجعة consent flow وسياسة الخصوصية وData Disclosure بما يتناسب مع التتبع الفعلي.</div></div>
+    <div class="prow"><div class="label">Cohorts</div><div class="desc">بناء Cohorts حسب Source / Campaign / Creative / Country / Activation / Subscription.</div></div>
+    <div class="prow"><div class="label">تقييم MMP</div><div class="desc">Adjust / AppsFlyer لاحقًا إذا حجم الصرف أو تعدد الأسواق يبرر التكلفة.</div></div>
+  </div>
+
+  <h3 style="margin:34px 0 16px; font-size:18px; color:#fff;">Measurement Framework</h3>
+  <div class="grid cols-2">
+    <div class="kpi-card"><div class="kpi-top">Acquisition</div><div class="kpi-body">
+      <div class="kpi-row"><div class="k">المؤشر</div><div class="v">CTR · Tap-to-install · CPI</div><div class="w">هل المتجر والإعلان يحوّلان الاهتمام إلى تحميل؟</div></div>
+      <div class="kpi-row"><div class="k">الاستخدام في القرار</div><div class="v">إيقاف أو توسيع المصادر والكلمات والإبداعات</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">Activation</div><div class="kpi-body">
+      <div class="kpi-row"><div class="k">المؤشر</div><div class="v">Activation Rate · CPA</div><div class="w">هل المستخدم يصل للحظة القيمة فعلًا؟</div></div>
+      <div class="kpi-row"><div class="k">الاستخدام في القرار</div><div class="v">تغيير onboarding والرسالة والتحسين على حدث أعمق</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">Retention</div><div class="kpi-body">
+      <div class="kpi-row"><div class="k">المؤشر</div><div class="v">D1 / D7 / D30 · WAU</div><div class="w">هل توجد عادة استخدام أم تحميل لمرة واحدة؟</div></div>
+      <div class="kpi-row"><div class="k">الاستخدام في القرار</div><div class="v">تحديد جودة القناة والمنتج ورسائل العودة</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">Monetization</div><div class="kpi-body">
+      <div class="kpi-row"><div class="k">المؤشر</div><div class="v">Trial CVR · Paid CVR · CAC</div><div class="w">هل المستخدم المستهدف قابل للدفع؟</div></div>
+      <div class="kpi-row"><div class="k">الاستخدام في القرار</div><div class="v">تعديل paywall والباقة والجمهور والتحسين</div></div>
+    </div></div>
+    <div class="kpi-card" style="grid-column:1/-1;"><div class="kpi-top">Economics</div><div class="kpi-body">
+      <div class="kpi-row"><div class="k">المؤشر</div><div class="v">Payback · ROAS · LTV</div><div class="w">هل يمكن التوسع بشكل صحي؟</div></div>
+      <div class="kpi-row"><div class="k">الاستخدام في القرار</div><div class="v">زيادة الميزانية فقط عندما يدعم الاقتصاد ذلك</div></div>
+    </div></div>
+  </div>
+
+  <div class="callout" style="background:rgba(255,255,255,0.08); border-color:#7a6bff; color:#e8e5ff;">
+    <b>المبدأ:</b> لن نعلن نجاح حملة لأنها حققت CPI منخفض. قد يكون CPI أعلى قليلًا لكنه يجلب Activated Users وPremium Subscribers أكثر — وهذا هو النجاح الحقيقي.
+  </div>
+</section>
+
+<!-- 05 ASO / APPLE ADS -->
+<section id="aso" class="band">
+  <div class="section-head">
+    <div class="num-badge">05</div>
+    <div>
+      <h2>ASO وApple Ads: الفوز داخل App Store</h2>
+      <p>App Store Growth</p>
+    </div>
+  </div>
+  <p class="lead">لأن Cliptx موزّع حاليًا عبر App Store، صفحة التطبيق ليست مجرد صفحة معلومات — هي Landing Page لكل الحملات تقريبًا. تحسينها يرفع قيمة كل ريال أو دولار يُصرف خارج المتجر وداخله.</p>
+
+  <div class="grid cols-3">
+    <div class="card"><h4><span class="dot"></span>Keyword Strategy</h4><p>كلمات بحث حسب intent: video editor، clip maker، photo editor، templates، background removal، إضافة إلى alternative/competitor حيث تكون مسموحة.</p></div>
+    <div class="card"><h4><span class="dot"></span>Metadata & Localisation</h4><p>تحسين Name/Subtitles/Keywords/Descriptions داخل حدود Apple، مع بناء نسخة عربية للسعودية والخليج بدل الاعتماد على الإنجليزية فقط.</p></div>
+    <div class="card"><h4><span class="dot"></span>Screenshots & Preview</h4><p>ترتيب اللقطات حسب Benefit لا حسب قائمة المزايا: النتيجة أولًا، ثم السرعة، ثم المجتمع، ثم Premium.</p></div>
+    <div class="card"><h4><span class="dot"></span>Ratings System</h4><p>طلب التقييم بعد لحظة نجاح مثل Export ناجح أو عدة جلسات، بدون تحفيز غير مسموح، مع رصد أسباب التقييمات السلبية.</p></div>
+    <div class="card"><h4><span class="dot"></span>Custom Product Pages</h4><p>صفحات مخصصة لرسائل مختلفة: Video Editing، Photo Editing، Templates، Background Removal، Creator Community.</p></div>
+    <div class="card"><h4><span class="dot"></span>Product Page Optimisation</h4><p>اختبار لقطات ورسائل باستخدام Product Page Optimization عندما تكون العينة كافية لاتخاذ قرار.</p></div>
+  </div>
+
+  <h3 style="margin:34px 0 16px; font-size:18px; color:var(--navy);">هيكلة Apple Ads المقترحة</h3>
+  <div class="plist">
+    <div class="prow"><div class="label">Search Results</div><div class="desc">التقاط المستخدم الذي يبحث فعلًا عن محرر فيديو/صور أو بدائل المنافسين.</div></div>
+    <div class="prow"><div class="label">Search Tab</div><div class="desc">توسيع الاكتشاف قبل كتابة البحث عند الحاجة لزيادة Awareness.</div></div>
+    <div class="prow"><div class="label">Product Pages / Today Tab</div><div class="desc">تُستخدم لاحقًا في حملات أكبر، Feature Drops أو مواسم — وليس كأول مكان للصرف دائمًا.</div></div>
+    <div class="prow"><div class="label">تقسيم الحملات</div><div class="desc">حسب Discov
