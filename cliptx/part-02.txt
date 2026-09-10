@@ -1,0 +1,152 @@
+relative; overflow:hidden;}
+  .phase::before{content:""; position:absolute; top:0; right:0; left:0; height:5px; background:linear-gradient(90deg, var(--blue), var(--blue-light));}
+  .phase .ph-num{font-family:'Tajawal'; font-weight:900; font-size:26px; color:var(--blue); opacity:.8;}
+  .phase .ph-week{font-size:11px; color:var(--muted); font-weight:700; margin-bottom:6px;}
+  .phase h4{font-size:14.5px; color:var(--navy); margin:6px 0 10px; font-family:'Tajawal'; font-weight:700;}
+  .phase ul{padding-inline-start:18px; font-size:12.5px; color:var(--muted);}
+  .phase ul li{margin-bottom:5px;}
+
+  /* ---------- TABLE-ISH LIST ---------- */
+  .plist{display:flex; flex-direction:column; gap:10px;}
+  .prow{
+    display:flex; justify-content:space-between; align-items:center; gap:14px;
+    background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 18px;
+  }
+  .prow .label{font-family:'Tajawal'; font-weight:700; color:var(--navy); font-size:13.5px; min-width:190px;}
+  .prow .desc{font-size:13px; color:var(--muted); flex:1;}
+
+  /* ---------- BADGE LIST for exclusions ---------- */
+  .xlist{list-style:none; display:grid; gap:10px;}
+  .xlist li{
+    background:#fff; border:1px solid var(--line); border-radius:10px; padding:12px 16px;
+    font-size:13.5px; color:var(--navy); display:flex; align-items:flex-start; gap:10px;
+  }
+  .xlist li::before{content:"—"; color:var(--blue); font-weight:900; margin-top:1px;}
+
+  /* Positioning quote */
+  .position-quote{
+    text-align:center; padding:40px 20px; background:linear-gradient(135deg, var(--navy), #150a5e);
+    border-radius:20px; color:#fff; margin:30px 0;
+  }
+  .position-quote .en{font-family:'Tajawal'; font-size:22px; font-weight:800; direction:ltr; color:#fff; margin-bottom:12px;}
+  .position-quote .ar{font-size:16px; color:#c9c1ff;}
+
+  /* North star metric block */
+  .northstar{
+    display:flex; align-items:center; gap:22px; background:#fff; border:2px solid var(--blue);
+    border-radius:18px; padding:24px; margin:24px 0;
+  }
+  .northstar .icon{
+    width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg, var(--blue), var(--blue-light));
+    display:flex; align-items:center; justify-content:center; color:#fff; font-size:26px; font-weight:900; font-family:'Tajawal'; min-width:64px;
+  }
+  .northstar h4{color:var(--navy); font-family:'Tajawal'; font-weight:800; font-size:16px; margin-bottom:6px;}
+  .northstar p{font-size:13.5px; color:var(--muted);}
+
+  /* section divider background alt */
+  .band{background:#fff;}
+  .band-navy{background:var(--navy); color:#fff;}
+  .band-navy .section-head h2{color:#fff;}
+  .band-navy .lead{color:#c9c4f0;}
+  .band-navy .card{background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.12);}
+  .band-navy .card h4{color:#fff;}
+  .band-navy .card p{color:#b8b3e0;}
+
+  footer{
+    background:var(--navy); color:#c9c4f0; text-align:center; padding:50px 6% 40px;
+  }
+  footer .logo{font-family:'Tajawal'; font-weight:900; font-size:20px; color:#fff; margin-bottom:8px;}
+  footer .tagline{font-size:14px; color:#a89bff; margin-bottom:20px;}
+  footer .fine{font-size:11.5px; color:#5f5896;}
+
+  .cadence-row{display:flex; gap:14px; flex-wrap:wrap; margin-top:20px;}
+  .cadence-pill{background:#fff; border:1px solid var(--line); border-radius:30px; padding:10px 20px; font-size:13px; color:var(--navy); display:flex; gap:8px; align-items:center;}
+  .cadence-pill b{color:var(--blue); font-family:'Tajawal';}
+
+  @media print{
+    .topbar{position:static;}
+    .hero{padding:60px 6% 50px;}
+    section{padding:40px 6%;}
+    .card, .kpi-card, .phase, .funnel-step, .prow, .position-quote, .northstar, .cadence-pill, .xlist li, .kpi-row{
+      break-inside:avoid; page-break-inside:avoid;
+    }
+    .section-head{break-after:avoid; page-break-after:avoid;}
+    h2,h3,h4{break-after:avoid; page-break-after:avoid;}
+    .grid.cols-4{grid-template-columns:repeat(2,1fr);}
+    .grid.cols-3{grid-template-columns:repeat(2,1fr);}
+    .phases{grid-template-columns:repeat(2,1fr);}
+    footer{break-before:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">SAHAB <span>×</span> CLIPTX</div>
+  <nav>
+    <a href="#exec">الملخص</a>
+    <a href="#product">المنتج</a>
+    <a href="#growth">منظومة النمو</a>
+    <a href="#measure">القياس</a>
+    <a href="#aso">ASO</a>
+    <a href="#creative">المحتوى</a>
+    <a href="#paid">الحملات</a>
+    <a href="#lifecycle">الاحتفاظ</a>
+    <a href="#loops">Growth Loops</a>
+    <a href="#kpi">KPIs</a>
+    <a href="#roadmap">خارطة 90 يوم</a>
+    <a href="#scope">نطاق العمل</a>
+    <a href="#next">الخطوة التالية</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="tag">SEPTEMBER 2026 · STRATEGIC PROPOSAL · NO MEDIA BUDGET INCLUDED</span>
+  <h1>عرض تسويقي واستراتيجية نمو<br>لتطبيق Cliptx</h1>
+  <p class="sub">من التحميل إلى الاستخدام المتكرر ثم الاشتراك — بمنظومة نمو قابلة للقياس والتطوير.</p>
+  <div class="meta">
+    <div>الجهة المستفيدة<b>Cliptx</b></div>
+    <div>إعداد<b>وكالة سحاب</b></div>
+    <div>التاريخ<b>سبتمبر 2026</b></div>
+  </div>
+</div>
+
+<!-- 01 EXEC SUMMARY -->
+<section id="exec" class="band">
+  <div class="section-head">
+    <div class="num-badge">01</div>
+    <div>
+      <h2>الملخص التنفيذي</h2>
+      <p>Executive Summary</p>
+    </div>
+  </div>
+  <p class="lead">
+    Cliptx ليس مجرد محرر فيديو وصور؛ المنتج يجمع أدوات التحرير على الموبايل مع طبقة اجتماعية للاكتشاف والنشر والتفاعل بين المنشئين.
+    هذه التركيبة تفتح فرصة أكبر من مجرد شراء تحميلات: بناء دورة نمو تبدأ من الاكتساب، تمر بالتفعيل والاستخدام، ثم تتحول إلى احتفاظ واشتراك مدفوع.
+  </p>
+  <div class="callout">
+    <b>الهدف المركزي:</b> تحويل الإنفاق التسويقي من شراء Install إلى اكتساب مستخدمين يقومون بتحرير حقيقي، يصدّرون أو ينشرون، يعودون للتطبيق، ثم ينتقل جزء منهم إلى Premium.
+  </div>
+
+  <div class="grid cols-2" style="margin-top:30px;">
+    <div class="card">
+      <h4><span class="dot"></span>المنصة الحالية</h4>
+      <p>متاح على Apple App Store لأجهزة iPhone وiPad، موجّه أساسًا لـ iOS. أي توسع إلى Android يُعامل كمرحلة مستقلة عند توفره.</p>
+    </div>
+    <div class="card">
+      <h4><span class="dot"></span>نموذج الربح</h4>
+      <p>Freemium مع اشتراك Premium يفتح مزايا مثل التصدير بدون علامة مائية، كامل القوالب والملصقات، الصوت، وخصائص متقدمة أخرى.</p>
+    </div>
+    <div class="card">
+      <h4><span class="dot"></span>مرحلة المنتج</h4>
+      <p>ما يزال في نمو مبكر؛ الإصدار 1.5 صدر أواخر أغسطس 2026، والتقييمات ما زالت غير كافية لإظهار ملخص Ratings على المتجر.</p>
+    </div>
+    <div class="card">
+      <h4><span class="dot"></span>ميزة قابلة للنمو</h4>
+      <p>إلى جانب التحرير، توجد خصائص مشاركة واكتشاف ومنشئي محتوى وملفات شخصية — تسمح ببناء Community Loop لا Utility App فقط.</p>
+    </div>
+  </div>
+  <p style="font-size:12px; color:var(--muted); margin-top:16px;">ملاحظة: تفاصيل المنتج أعلاه مبنية على صفحة App Store الحالية وملاحظات الإصدارات حتى سبتمبر 2026.</p>
+
+  <h3 style="margin:36px 0 18px; font-size:18px; color:var(--navy);">ما الذ
