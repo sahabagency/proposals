@@ -1,0 +1,82 @@
+ي سنبنيه — Scope at a Glance</h3>
+  <div class="grid cols-4">
+    <div class="card"><h4><span class="dot"></span>Measurement & Attribution</h4><p>بنية أحداث واضحة، ربط منصات الإعلانات، قياس iOS متوافق مع الخصوصية، ولوحة مؤشرات كاملة.</p></div>
+    <div class="card"><h4><span class="dot"></span>ASO + Apple Ads</h4><p>تحسين صفحة المتجر والكلمات والـ Screenshots وCustom Product Pages، ثم التقاط الطلب عالي النية داخل App Store.</p></div>
+    <div class="card"><h4><span class="dot"></span>Creative Growth Engine</h4><p>محتوى Social-first وUGC وديموهات للميزات وBefore/After، مع اختبار أسبوعي للـHooks والرسائل والفورمات.</p></div>
+    <div class="card"><h4><span class="dot"></span>Paid Acquisition & Retargeting</h4><p>هيكلة Apple Ads وTikTok وMeta وSnapchat وGoogle حسب مرحلة المستخدم، ثم نقل التحسين تدريجيًا من Install إلى Subscription.</p></div>
+  </div>
+</section>
+
+<!-- 02 PRODUCT & POSITIONING -->
+<section id="product" class="band-navy" style="border-radius:0;">
+  <div class="section-head">
+    <div class="num-badge">02</div>
+    <div>
+      <h2>فهم المنتج والتموضع التسويقي</h2>
+      <p>Product, Audience & Positioning</p>
+    </div>
+  </div>
+  <p class="lead">
+    التحدي الرئيسي في سوق محررات الفيديو أن المستخدم يعرف أسماء كبيرة مسبقًا، ويستطيع إنجاز جزء من التحرير داخل TikTok أو Instagram نفسه.
+    لذلك لا يكفي أن تقول Cliptx "حرر فيديو آخر" — المطلوب سبب واضح للتجربة، وسبب أقوى للعودة.
+  </p>
+
+  <div class="grid cols-2">
+    <div class="card"><h4><span class="dot"></span>الوظيفة</h4><p>قص، فلاتر، نصوص، ملصقات، ضبط ألوان، صوت، قوالب، إزالة خلفية وغيرها. المؤشر: إعلانات Demo وBefore/After وFeature Proof.</p></div>
+    <div class="card"><h4><span class="dot"></span>الفرق الحقيقي</h4><p>الجمع بين Create + Discover + Publish — التحرير والتصدير/النشر مع تجربة منشئين واكتشاف داخل المنتج. التموضع: "أنشئ وشارك واكتشف من مكان واحد".</p></div>
+    <div class="card"><h4><span class="dot"></span>نموذج الربح</h4><p>Freemium → Premium: النسخة المجانية تزيل احتكاك التجربة، وPremium يرفع قيمة الاستخدام. نحتاج فصل رسائل Acquisition عن Monetization.</p></div>
+    <div class="card"><h4><span class="dot"></span>مرحلة السوق</h4><p>Early Growth — المنتج يحتاج إثبات أفضل قنوات وجماهير ورسائل قبل التوسع. التركيز أولًا على التعلّم السريع لا صرف الميزانية على نطاق واسع.</p></div>
+  </div>
+
+  <h3 style="margin:36px 0 18px; font-size:18px; color:#fff;">فرضية الجمهور الأولى — تحتاج إثباتًا بالبيانات</h3>
+  <div class="grid cols-4">
+    <div class="card"><h4><span class="dot"></span>Creators 18–34</h4><p>صناع المحتوى القصير، أصحاب الحسابات الصغيرة والمتوسطة، ومن ينشر باستمرار على TikTok/Instagram/Snapchat.</p></div>
+    <div class="card"><h4><span class="dot"></span>Social Power Users</h4><p>مستخدمون عاديون يصنعون محتوى شخصيًا بكثافة، ويحتاجون أدوات أسرع وأسهل من برامج سطح المكتب.</p></div>
+    <div class="card"><h4><span class="dot"></span>Micro-business & Sellers</h4><p>أصحاب متاجر ومشاريع صغيرة يحتاجون Reels وإعلانات بسيطة بدون محرر محترف.</p></div>
+    <div class="card"><h4><span class="dot"></span>Growth Segment: GCC</h4><p>السعودية والخليج مناسبون لاختبار محتوى عربي محلي، قوالب موسمية، لهجات، وCreator Seeding.</p></div>
+  </div>
+  <div class="callout" style="background:rgba(255,255,255,0.08); border-color:#7a6bff; color:#e8e5ff;">
+    <b>قاعدة مهمة:</b> العمر 16–34 والجمهور الخليجي في النسخة الأولى يجب أن يُعامل كفرضية لا كحقيقة ثابتة. أول 30 يوم من البيانات سيحدد من يفعّل فعليًا، من يعود، ومن يدفع.
+  </div>
+
+  <div class="position-quote">
+    <div class="en">"Create fast. Make it yours. Share it anywhere."</div>
+    <div class="ar">الترجمة التسويقية: حرّر بسرعة، اصنع أسلوبك، وشارك من مكان واحد.</div>
+  </div>
+</section>
+
+<!-- 03 GROWTH ARCHITECTURE -->
+<section id="growth" class="band">
+  <div class="section-head">
+    <div class="num-badge">03</div>
+    <div>
+      <h2>منظومة النمو من Install إلى Revenue</h2>
+      <p>Growth Architecture</p>
+    </div>
+  </div>
+  <p class="lead">المسار الذي سنقيس عليه العمل ليس Funnel إعلاني فقط، بل رحلة استخدام كاملة. كل مرحلة لها حدث داخل التطبيق، رسالة إبداعية، جمهور، وقرار تحسين مختلف.</p>
+
+  <div class="funnel">
+    <div class="funnel-step"><div class="funnel-num">1</div><div class="funnel-content"><div class="when">اليوم 0 — Acquire</div><h4>وصول المستخدم الصحيح</h4><p>إلى صفحة التطبيق عبر Apple Ads / TikTok / Meta / Snap / Google + ASO.</p></div></div>
+    <div class="funnel-step"><div class="funnel-num">2</div><div class="funnel-content"><div class="when">أول جلسة — Activate</div><h4>إكمال أول قيمة حقيقية بسرعة</h4><p>Onboarding → بدء تحرير → إنهاء تحرير → Export/Share/Publish.</p></div></div>
+    <div class="funnel-step"><div class="funnel-num">3</div><div class="funnel-content"><div class="when">الأسبوع الأول — Engage</div><h4>إعطاء سبب للعودة</h4><p>واكتشاف مزايا أعمق: Templates، Community، creators، feature education.</p></div></div>
+    <div class="funnel-step"><div class="funnel-num">4</div><div class="funnel-content"><div class="when">D7 / D30 — Retain</div><h4>تحويل عادة إلى استخدام</h4><p>Push/deep links، reactivation، content drops، lifecycle segments.</p></div></div>
+    <div class="funnel-step"><div class="funnel-num">5</div><div class="funnel-content"><div class="when">بعد إثبات القيمة — Monetize</div><h4>تحويل شريحة عالية النية إلى Premium</h4><p>Paywall messaging، trial/offer tests، premium value proof.</p></div></div>
+    <div class="funnel-step"><div class="funnel-num">6</div><div class="funnel-content"><div class="when">بعد النجاح — Refer</div><h4>تحويل المستخدم إلى قناة اكتساب</h4><p>Branded exports، share links، referrals، creator/community loops.</p></div></div>
+  </div>
+
+  <div class="northstar">
+    <div class="icon">N★</div>
+    <div>
+      <h4>North Star Metric المقترح: Weekly Activated Creators (WAC)</h4>
+      <p>عدد المستخدمين الأسبوعيين الذين ينجزون فعلًا قيمة حقيقية: بدء تحرير + إكماله + تصدير أو نشر. هذا المؤشر أقرب لصحة المنتج من عدد التحميلات، ويرتبط لاحقًا بالاحتفاظ والاشتراك.</p>
+    </div>
+  </div>
+
+  <h3 style="margin:30px 0 16px; font-size:18px; color:var(--navy);">أحداث المنتج التي يجب قياسها — Core Event Taxonomy</h3>
+  <div class="grid cols-3">
+    <div class="kpi-card"><div class="kpi-top">Onboarding</div><div class="kpi-body"><p style="font-size:13px; color:var(--muted);">first_open · onboarding_complete · signup_complete · permission_result</p></div></div>
+    <div class="kpi-card"><div class="kpi-top">Editing</div><div class="kpi-body"><p style="font-size:13px; color:var(--muted);">editor_open · edit_start · feature_use · template_use · edit_complete</p></div></div>
+    <div class="kpi-card"><div class="kpi-top">Value Moment</div><div class="kpi-body"><p style="font-size:13px; color:var(--muted);">export_complete · share_complete · publish_complete</p></div></div>
+    <div class="kpi-card"><div class="kpi-top">Community</div><div class="kpi-body"><p style="font-size:13px; color:var(--muted);">feed_view · creator_view · follow · like · comment · share_post</p></div></div>
+    <div class="kpi-card"><div class="kpi-top">
