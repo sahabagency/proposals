@@ -1,0 +1,97 @@
+فيديو خلال دقيقة"</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">حرر ولم يصدّر (start_edit > export = 0,0)</div><div class="kpi-body">
+      <div class="kpi-row"><div class="w">لماذا يهم: إكمال المهمة، إزالة التردد</div></div>
+      <div class="kpi-row"><div class="v">الرسالة: "تعديلك جاهز — كمّل وصدّر"</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">صدّر ولم ينشر (export > publish = 0,0)</div><div class="kpi-body">
+      <div class="kpi-row"><div class="w">لماذا يهم: إظهار قيمة المجتمع أو المشاركة</div></div>
+      <div class="kpi-row"><div class="v">الرسالة: "شارك النتيجة واكتشف منشئين آخرين"</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">نشط وغير Premium (WAC مرتفع + no paid)</div><div class="kpi-body">
+      <div class="kpi-row"><div class="w">لماذا يهم: إثبات قيمة Premium بميزة مستخدمة فعليًا</div></div>
+      <div class="kpi-row"><div class="v">الرسالة: "افتح القوالب الكاملة والتصدير بلا علامة"</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">Dormant (لا جلسة 7–30 يوم)</div><div class="kpi-body">
+      <div class="kpi-row"><div class="w">لماذا يهم: Feature drop أو template/trend جديد</div></div>
+      <div class="kpi-row"><div class="v">الرسالة: "رجعنا لك بقوالب جديدة"</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">Premium (paid = true)</div><div class="kpi-body">
+      <div class="kpi-row"><div class="w">لماذا يهم: Retention = advocacy وreferral</div></div>
+      <div class="kpi-row"><div class="v">الرسالة: Early access، creator status</div></div>
+    </div></div>
+  </div>
+
+  <h3 style="margin:34px 0 16px; font-size:18px; color:#fff;">القنوات الممكنة</h3>
+  <div class="plist">
+    <div class="prow"><div class="label">Push Notifications</div><div class="desc">مرتبطة بمحتوى أو إجراء حقيقي، وليس إرسالًا يوميًا عامًا.</div></div>
+    <div class="prow"><div class="label">Deep Links</div><div class="desc">تفتح المستخدم على Template / Creator / Feature / Post محدد.</div></div>
+    <div class="prow"><div class="label">Paid Retargeting</div><div class="desc">عندما تكون الشريحة والحجم يسمحان بذلك.</div></div>
+    <div class="prow"><div class="label">In-app Messaging / Paywall tests</div><div class="desc">حسب السلوك الفعلي للمستخدم.</div></div>
+    <div class="prow"><div class="label">Email</div><div class="desc">فقط إذا كان له دور واضح في lifecycle ولا يتحول إلى قناة مزعجة.</div></div>
+  </div>
+
+  <div class="callout" style="background:rgba(255,255,255,0.08); border-color:#7a6bff; color:#e8e5ff;">
+    <b>مهم:</b> Retention ليست مسؤولية الإعلانات وحدها. إذا وجدنا أن قناة معينة تجلب مستخدمين يتسربون من نفس نقطة داخل المنتج، نرفع المشكلة كتوصية Product Growth بدل محاولة تعويضها بزيادة الصرف.
+  </div>
+</section>
+
+<!-- 09 GROWTH LOOPS -->
+<section id="loops" class="band">
+  <div class="section-head">
+    <div class="num-badge">09</div>
+    <div>
+      <h2>Growth Loops وهاكات نمو مقترحة</h2>
+      <p>Product-Led Growth Ideas</p>
+    </div>
+  </div>
+  <p class="lead">هذه الأفكار ليست حيلًا منفصلة — الأفضل تحويلها إلى حلقات نمو داخل المنتج، بحيث ينتج الاستخدام نفسه اكتسابًا أو عودة أو إحالة جديدة.</p>
+
+  <div class="grid cols-4">
+    <div class="card"><h4><span class="dot"></span>1. Branded Export Loop</h4><p>تطوير العلامة المائية إلى Share Sheet ذكي غير مزعج، برابط إحالة/Deep Link قابل للقياس.</p></div>
+    <div class="card"><h4><span class="dot"></span>2. Trend Template Loop</h4><p>قوالب مرتبطة بالترندات والمواسم — المستخدم يطبق ← يشارك ← المشاهد يكتشف Cliptx ← يدخل للقالب نفسه.</p></div>
+    <div class="card"><h4><span class="dot"></span>3. Creator Seed Program</h4><p>استقطاب Micro-creators بوصول مبكر وظهور داخل المجتمع، مقابل محتوى استخدام حقيقي يمكن تعزيزه لاحقًا.</p></div>
+    <div class="card"><h4><span class="dot"></span>4. Community Challenges</h4><p>تحديات أسبوعية بقالب أو موضوع، Featured Creators وBadges — سبب متكرر للنشر داخل Cliptx ومشاركته خارجه.</p></div>
+    <div class="card"><h4><span class="dot"></span>5. Premium Unlock Experiments</h4><p>بدل Paywall واحد: Limited unlock / trial / preview feature في اللحظات التي يرى فيها المستخدم القيمة، مع الالتزام بسياسات App Store.</p></div>
+    <div class="card"><h4><span class="dot"></span>6. Local Seasonal Drops</h4><p>قوالب عربية للسعودية والخليج: اليوم الوطني، رمضان، العيد، موسم الرياض، تخرج — مع Creator packs محلية.</p></div>
+    <div class="card"><h4><span class="dot"></span>7. Competitor Intent Capture</h4><p>عبر ASO وApple Ads حول category/alternative intent، بدل محاولة بناء Awareness من الصفر فقط.</p></div>
+    <div class="card"><h4><span class="dot"></span>8. Feature Drop Loop</h4><p>كل إصدار جديد يتحول إلى Launch صغير: teaser → demo → creator use case → in-app retargeting prompt.</p></div>
+  </div>
+
+  <h3 style="margin:34px 0 16px; font-size:18px; color:var(--navy);">أفكار اختبارات أعلى تأثيرًا في أول 90 يوم</h3>
+  <ul class="xlist">
+    <li>اختبار 3 رسائل تموضع مختلفة: "سرعة التحرير" مقابل "نتيجة احترافية" مقابل "تحرير + مجتمع".</li>
+    <li>اختبار Landing experience عبر Custom Product Pages لكل رسالة رئيسية.</li>
+    <li>اختبار Onboarding مختصر يوصّل المستخدم إلى أول Export بأقل عدد خطوات ممكن.</li>
+    <li>اختبار توقيت Paywall بعد Value Moment بدل عرضه مبكرًا لكل المستخدمين.</li>
+    <li>اختبار Arabic store listing ومحتوى سعودي مقابل English-only في السوق السعودي.</li>
+    <li>بعد توفر حجم بيانات كافٍ: Geo/Holdout test لقياس Incrementality بدل الاعتماد على attribution وحده.</li>
+  </ul>
+</section>
+
+<!-- 10 KPIs -->
+<section id="kpi" class="band-navy">
+  <div class="section-head">
+    <div class="num-badge">10</div>
+    <div>
+      <h2>KPIs والتقارير واتخاذ القرار</h2>
+      <p>KPIs, Reporting & Decision System</p>
+    </div>
+  </div>
+  <p class="lead">التقرير الشهري لن يكون تجميع أرقام. كل تقرير ينتهي بأربعة أسئلة: ماذا حدث؟ لماذا حدث؟ ماذا تعلّمنا؟ وما الذي سنغيّره؟</p>
+
+  <div class="grid cols-2">
+    <div class="kpi-card"><div class="kpi-top">Growth</div><div class="kpi-body">
+      <div class="kpi-row"><div class="v">New users / Installs</div><div class="w">حجم الاكتساب — مؤشر سياقي فقط، وليس هدفًا نهائيًا</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">Quality</div><div class="kpi-body">
+      <div class="kpi-row"><div class="v">Activation Rate / CPA</div><div class="w">جودة المستخدم المكتسب — أهم مؤشر مبكر لجودة القناة</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">Usage</div><div class="kpi-body">
+      <div class="kpi-row"><div class="v">sessions / WAU / WAC</div><div class="w">هل المنتج يدخل في نمط استخدام؟ يحدد المنتج/المحتوى الذي يزيد العادة</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">Retention</div><div class="kpi-body">
+      <div class="kpi-row"><div class="v">D1 / D7 / D30</div><div class="w">هل يعود المستخدم؟ مقارنة القنوات والجماهير والبلدان</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">Monetization</div><div class="kpi-body">
+      <div 
