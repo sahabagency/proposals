@@ -1,0 +1,42 @@
+>
+      • صلاحيات App Store Connect وApple Ads، وFirebase/Analytics أو النظام التحليلي الحالي.<br>
+      • صلاحيات Google / Snapchat / TikTok / Meta عند تفعيل كل قناة.<br>
+      • ملفات الهوية، Screenshots، App Icon، فيديوهات أو Screen recordings/Builds اللازمة للإنتاج.<br>
+      • تأكيد الأسواق ذات الأولوية، اللغات، وأي Personas أو بيانات استخدام موجودة.<br>
+      • دعم تقني سريع عند الحاجة لإضافة Deep Link / SDK / Event أو تعديل paywall/onboarding.<br>
+      • جهة قرار واحدة للموافقات لتجنب تعطيل cadence الـTesting/Creative.
+      </p>
+    </div>
+    <div class="card">
+      <h4><span class="dot"></span>من سحاب</h4>
+      <p>
+      • قيادة Growth Strategy، ASO، acquisition، creative testing، reporting المستمر والتحسين.<br>
+      • تحويل البيانات إلى قرارات قابلة للتنفيذ بدل الاكتفاء بإرسال Metrics.<br>
+      • مراجعة أسبوعية للأداء والمحتوى واختبارات النمو.<br>
+      • رفع توصيات Product Growth عندما يكون سبب التسرّب داخل تجربة التطبيق وليس الإعلان.<br>
+      • توثيق ما ينجح وما يفشل لبناء Playbook يمكن توسيعه على أسواق وقنوات جديدة.
+      </p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:26px;">
+    <b>Fast Approval Loop:</b> لأن التطبيقات تعتمد على سرعة الاختبار، الأفضل اعتماد المحتوى والحملات خلال 24–48 ساعة. التأخير الطويل في الموافقات يبطئ التعلم ويرفع تكلفة اكتشاف الـCreative والـAudience الفائز.
+  </div>
+
+  <div class="northstar" style="border-color:var(--navy); margin-top:34px;">
+    <div class="icon">▶</div>
+    <div>
+      <h4>الخطوة التالية</h4>
+      <p>بعد اعتماد التوجه، تبدأ سحاب بـ Kickoff قصير لجمع الصلاحيات والبيانات، ثم تسلّم Measurement Baseline + ASO Audit + Growth Backlog قبل تشغيل أول دورة توسع مدفوعة على مدى 90 يومًا.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">SAHAB AGENCY × CLIPTX</div>
+  <div class="tagline">Build the growth system — not just the campaign.</div>
+  <div class="fine">September 2026 · Strategic Proposal · No Media Budget Included</div>
+</footer>
+
+</body>
+</html>
