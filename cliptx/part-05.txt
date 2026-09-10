@@ -1,0 +1,92 @@
+ery / Competitor / Category / Brand، ثم ربط الكلمات بأفضل Custom Product Page.</div></div>
+  </div>
+
+  <div class="callout">
+    <b>فرصة سريعة:</b> الصفحة الحالية باللغة الإنجليزية فقط. إذا كان الخليج ضمن الأسواق الأساسية، فـ Arabic localisation + screenshots عربية يمكن أن تكون من أسرع الاختبارات ذات الأثر على Conversion Rate.
+  </div>
+</section>
+
+<!-- 06 CREATIVE -->
+<section id="creative" class="band-navy">
+  <div class="section-head">
+    <div class="num-badge">06</div>
+    <div>
+      <h2>محرك المحتوى والإبداع</h2>
+      <p>Creative & Content Engine</p>
+    </div>
+  </div>
+  <p class="lead">في تطبيقات التحرير، الإعلان نفسه يجب أن يثبت قدرة المنتج خلال ثوانٍ. لذلك ستكون أولوية المحتوى "Show, don't tell": شاشة التطبيق، النتيجة، السرعة، ثم CTA واضح.</p>
+
+  <div class="grid cols-3">
+    <div class="card"><h4><span class="dot"></span>Demo / Screen-first</h4><p>تسجيلات حقيقية من التطبيق: من خام إلى نتيجة خلال 10–25 ثانية.</p></div>
+    <div class="card"><h4><span class="dot"></span>Before / After</h4><p>نتيجة بصرية قوية في أول ثانية، ثم كشف خطوات Cliptx.</p></div>
+    <div class="card"><h4><span class="dot"></span>UGC / Creator-first</h4><p>منشئ يتكلم بطبيعته: "كنت أعملها في 4 خطوات... هنا خلصتها بسرعة".</p></div>
+    <div class="card"><h4><span class="dot"></span>Template-led</h4><p>قالب مرتبط بترند أو حالة استخدام، ثم دعوة لتجربته داخل التطبيق.</p></div>
+    <div class="card"><h4><span class="dot"></span>Feature Proof</h4><p>ميزة واحدة فقط لكل إعلان: Background removal، speed، audio، stickers، crop...</p></div>
+    <div class="card"><h4><span class="dot"></span>Premium Value</h4><p>مقارنات واضحة: Premium vs Free بدون حشو، مع إظهار السبب الحقيقي للترقية.</p></div>
+  </div>
+
+  <h3 style="margin:34px 0 16px; font-size:18px; color:#fff;">Content Pillars</h3>
+  <div class="plist">
+    <div class="prow"><div class="label">How to Use X</div><div class="desc">تعليم + تفعيل المستخدم الجديد. الاستخدام: Organic + Paid education.</div></div>
+    <div class="prow"><div class="label">Feature</div><div class="desc">ميزة محددة، إثبات العمق وسهولة الاستخدام. الاستخدام: Acquisition + Retargeting.</div></div>
+    <div class="prow"><div class="label">Tips & Tricks</div><div class="desc">اختصار أو حيلة ترفع استخدام المستخدم المعتاد. الاستخدام: Retention content.</div></div>
+    <div class="prow"><div class="label">Before/After</div><div class="desc">النتيجة أولًا، أقوى دليل بصري سريع. الاستخدام: Performance creative.</div></div>
+    <div class="prow"><div class="label">Creator UGC</div><div class="desc">تجربة شخص حقيقي. الاستخدام: TikTok / Reels / Spark Ads — ثقة + Native feel.</div></div>
+    <div class="prow"><div class="label">Community</div><div class="desc">تحديات ومنشئون — سبب إضافي للعودة والمشاركة. الاستخدام: Engagement + referral loop.</div></div>
+    <div class="prow"><div class="label">New Features</div><div class="desc">كل تحديث كحدث يعيد تنشيط المستخدم ويحوّل التطوير إلى تسويق. الاستخدام: Reactivation + PR moments.</div></div>
+  </div>
+
+  <h3 style="margin:34px 0 16px; font-size:18px; color:#fff;">حلقة الاختبار الأسبوعية</h3>
+  <p style="font-size:14px; color:#c9c4f0;">نختبر متغيرًا أو متغيرين في كل مرة: Hook · Benefit · Creator · Length · CTA · Format · Audience — ثم نحتفظ بالفائز ونبني عليه Variations. الهدف ليس إنتاج محتوى كثير، بل زيادة نسبة المحتوى الرابح بمرور الوقت.</p>
+  <div class="callout" style="background:rgba(255,255,255,0.08); border-color:#7a6bff; color:#e8e5ff; margin-top:18px;">
+    <b>أولوية الاختبار:</b> أسرع متغير نختبره هو الـHooks الأولى (1–3 ثوانٍ). نفس الفكرة يمكن أن تنتج 5 Hooks مختلفة، وغالبًا الفرق بينها أكبر من الفرق بين حملتين كاملتين.
+  </div>
+</section>
+
+<!-- 07 PAID ACQUISITION -->
+<section id="paid" class="band">
+  <div class="section-head">
+    <div class="num-badge">07</div>
+    <div>
+      <h2>الحملات المدفوعة واكتساب المستخدمين</h2>
+      <p>Paid Acquisition</p>
+    </div>
+  </div>
+  <p class="lead">نبدأ بالقنوات التي تجمع بين Intent قوي وملاءمة عالية للجمهور، ثم نوسّع بعد إثبات جودة المستخدم. ترتيب الصرف النهائي يتحدد من بيانات Cliptx وليس من افتراض ثابت.</p>
+
+  <div class="grid cols-3">
+    <div class="card"><h4><span class="dot"></span>Apple Ads</h4><p>أولوية Search Results أولًا، ثم توسيع placements حسب النتائج — التقاط الطلب الموجود داخل App Store.</p></div>
+    <div class="card"><h4><span class="dot"></span>TikTok</h4><p>قناة أساسية لاختبار UGC وCreator-led creatives، مع Spark Ads للمحتوى العضوي الرابح عند توفره.</p></div>
+    <div class="card"><h4><span class="dot"></span>Meta</h4><p>Reels/Stories + App campaigns + Retargeting قوية لبناء شرائح وتوسيع الإبداعات الفائزة.</p></div>
+    <div class="card"><h4><span class="dot"></span>Snapchat</h4><p>اختبار السعودية والخليج بمواد Native Vertical، مع AR/Lens كتجربة خاصة عند وجود Concept مناسب وميزانية تبررها.</p></div>
+    <div class="card"><h4><span class="dot"></span>Google</h4><p>App Campaigns لـ iOS عند جاهزية القياس، وحملات Search/Web intent إذا توفرت صفحات مناسبة ومسار تتبع واضح.</p></div>
+    <div class="card"><h4><span class="dot"></span>Creator Whitelisting</h4><p>تحويل المحتوى المثبت عضويًا إلى Media Asset بدل إنتاج كل الإعلانات من الاستوديو.</p></div>
+  </div>
+
+  <h3 style="margin:34px 0 16px; font-size:18px; color:var(--navy);">تطور هدف التحسين</h3>
+  <div class="phases">
+    <div class="phase"><div class="ph-num">01</div><div class="ph-week">بيانات قليلة</div><h4>تكوين حجم بيانات أولي</h4><ul><li>Install / open_first</li><li>فهم القنوات</li></ul></div>
+    <div class="phase"><div class="ph-num">02</div><div class="ph-week">بعد ثبوت القياس</div><h4>شراء مستخدم يصل للقيمة</h4><ul><li>export / Activation</li><li>بدل تحميل فقط</li></ul></div>
+    <div class="phase"><div class="ph-num">03</div><div class="ph-week">حجم كافٍ</div><h4>تحسين نحو الدفع</h4><ul><li>Trial / subscription</li><li>المستخدم القابل للدفع</li></ul></div>
+    <div class="phase"><div class="ph-num">04</div><div class="ph-week">اقتصاد واضح</div><h4>التوسع على أساس LTV</h4><ul><li>ROAS / Payback / Value</li><li>وليس CPI</li></ul></div>
+  </div>
+
+  <div class="callout"><b>قاعدة الميزانية — Scale what proves value:</b> لن نوزع الميزانية بالتساوي على المنصات لمجرد وجودها. كل قناة تحصل على اختبار عادل، ثم تتحول الميزانية تدريجيًا إلى القنوات والجماهير والإبداعات التي تُثبت أفضل Activation وRetention وPaid Conversion.</div>
+</section>
+
+<!-- 08 LIFECYCLE -->
+<section id="lifecycle" class="band-navy">
+  <div class="section-head">
+    <div class="num-badge">08</div>
+    <div>
+      <h2>التفاعل، إعادة الاستهداف والاحتفاظ</h2>
+      <p>Lifecycle & Retention</p>
+    </div>
+  </div>
+  <p class="lead">إعادة الاستهداف في تطبيق Freemium يجب أن تكون حسب نقطة "التسرّب" لا حسب جمهور عام. كل مستخدم ترك مسارًا مختلفًا، لذلك يحتاج رسالة مختلفة.</p>
+
+  <div class="grid cols-2">
+    <div class="kpi-card"><div class="kpi-top">فتح ولم يحرر (open_editor = 0)</div><div class="kpi-body">
+      <div class="kpi-row"><div class="w">لماذا يهم: أول خطوة 0 — Hook + تعليمي سهل</div></div>
+      <div class="kpi-row"><div class="v">الرسالة: "ابدأ أول 
