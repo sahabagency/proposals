@@ -1,0 +1,100 @@
+ class="kpi-row"><div class="v">Paywall → Trial → Paid</div><div class="w">كفاءة التحويل إلى Premium — تحسين التوقيت والرسالة والسعر لاحقًا</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">Economics</div><div class="kpi-body">
+      <div class="kpi-row"><div class="v">CAC / LTV / ROAS</div><div class="w">هل التوسع مستدام؟ قرار Stop / Hold / Scale</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">Creative</div><div class="kpi-body">
+      <div class="kpi-row"><div class="v">Thumbstop / CTR / CVR</div><div class="w">لماذا إعلان يفوز وآخر يخسر؟ تغذية Creative backlog</div></div>
+    </div></div>
+    <div class="kpi-card"><div class="kpi-top">Store</div><div class="kpi-body">
+      <div class="kpi-row"><div class="v">Product page CVR</div><div class="w">هل صفحة المتجر تحوّل الزيارة؟ ASO وScreenshot tests</div></div>
+    </div></div>
+  </div>
+
+  <h3 style="margin:34px 0 16px; font-size:18px; color:#fff;">Cadence المقترح</h3>
+  <div class="cadence-row">
+    <div class="cadence-pill"><b>أسبوعيًا</b> Performance pulse + Creative test review + قرارات سريعة</div>
+    <div class="cadence-pill"><b>كل أسبوعين</b> Cohort/Retention review + Product growth findings + experiment backlog</div>
+    <div class="cadence-pill"><b>شهريًا</b> Executive report + channel economics + winners/losers + خطة الشهر التالي</div>
+    <div class="cadence-pill"><b>ربع سنوي</b> Growth review أوسع: positioning، markets، monetization، budget allocation، roadmap</div>
+  </div>
+</section>
+
+<!-- 11 ROADMAP -->
+<section id="roadmap" class="band">
+  <div class="section-head">
+    <div class="num-badge">11</div>
+    <div>
+      <h2>خارطة التنفيذ لأول 90 يوم</h2>
+      <p>90-Day Go-to-Market & Growth Plan</p>
+    </div>
+  </div>
+  <p class="lead">الأرقام المستهدفة النهائية تُحدد بعد الوصول للبيانات الأساسية من App Store Connect وAnalytics وحجم الميزانية والأسواق.</p>
+
+  <div class="phases">
+    <div class="phase"><div class="ph-num">01</div><div class="ph-week">الأسبوع 1–2</div><h4>Foundation Phase — قياس + جاهزية positioning</h4><ul><li>Access audit</li><li>Event map + baseline</li><li>ASO audit</li><li>Audience hypotheses</li><li>Creative & campaign architecture</li></ul></div>
+    <div class="phase"><div class="ph-num">02</div><div class="ph-week">الأسبوع 3–4</div><h4>Launch Phase — اختبارات اكتساب أولية</h4><ul><li>أول قنوات + Apple Ads</li><li>Creative Sprint أول</li><li>Social + Store page improvements</li><li>Dashboard v1</li></ul></div>
+    <div class="phase"><div class="ph-num">03</div><div class="ph-week">الأسبوع 5–8</div><h4>Learn Phase — تحسين الجودة لا الحجم</h4><ul><li>تحويل القرار إلى Activation/Retention</li><li>توسيع الفائزين</li><li>Retargeting segments</li><li>Arabic localisation tests + creator seeding</li></ul></div>
+    <div class="phase"><div class="ph-num">04</div><div class="ph-week">الأسبوع 9–12</div><h4>Scale Phase — توسيع النمو الرابح</h4><ul><li>Budget reallocation</li><li>Subscription optimisation</li><li>Growth loops + creative velocity</li><li>Next-market recommendations</li></ul></div>
+  </div>
+
+  <h3 style="margin:34px 0 16px; font-size:18px; color:var(--navy);">بوابات القرار — Decision Gates</h3>
+  <ul class="xlist">
+    <li>لا Scale قبل ثبات التتبع الأساسي ومعرفة Activation Rate حسب المصدر.</li>
+    <li>لا نقل التحسين إلى Subscription قبل وجود حجم أحداث كافٍ لتتعلم المنصات.</li>
+    <li>لا فتح أسواق كثيرة دفعة واحدة؛ نثبت Channel/Message/Product fit في أسواق أولية ثم نوسع.</li>
+    <li>لا نعتبر Creative Winner بناءً على CTR فقط؛ يجب ربطه بجودة المستخدم بعد التثبيت.</li>
+  </ul>
+
+  <div class="callout"><b>نهاية الـ90 يوم:</b> المخرج المطلوب ليس حملات شغالة فقط، بل Playbook واضح: أفضل سوق، أفضل قناة، أفضل جمهور، أفضل رسالة، أفضل Creative Pattern، تكلفة Activated User، مستوى retention، ومسار واقعي للوصول إلى Paid Growth.</div>
+</section>
+
+<!-- 12 SCOPE -->
+<section id="scope" class="band-navy">
+  <div class="section-head">
+    <div class="num-badge">12</div>
+    <div>
+      <h2>نطاق العمل والمخرجات</h2>
+      <p>Scope of Work & Deliverables</p>
+    </div>
+  </div>
+
+  <div class="grid cols-2">
+    <div class="card"><h4><span class="dot"></span>القياس والتحليلات</h4><p>Audit + event taxonomy + platform integrations + dashboard framework → Measurement Framework + tracking QA + KPI dashboard</p></div>
+    <div class="card"><h4><span class="dot"></span>ASO</h4><p>Keywords + metadata + screenshots strategy + localisation + experiments → Optimised App Store + roadmap + copy/creative briefs</p></div>
+    <div class="card"><h4><span class="dot"></span>Apple Ads</h4><p>Campaign architecture + keywords + CPP alignment + optimisation → حملات نشطة ومهيكلة ومحسّنة باستمرار</p></div>
+    <div class="card"><h4><span class="dot"></span>Paid Social</h4><p>TikTok + Meta + Snap + Google حيث يُبرَّر → حملات اكتساب/إعادة استهداف + مصفوفة اختبار</p></div>
+    <div class="card"><h4><span class="dot"></span>Creative</h4><p>Concepts + scripts + UGC briefs + demo formats + variations → خطة/عدد أصول شهرية حسب الباقة التجارية</p></div>
+    <div class="card"><h4><span class="dot"></span>Content Strategy</h4><p>Content pillars + calendar logic + organic/paid crossover → تقويم محتوى شهري + briefs</p></div>
+    <div class="card"><h4><span class="dot"></span>Lifecycle</h4><p>Segments + messages + deep link logic + reactivation ideas → Retention/retargeting playbook</p></div>
+    <div class="card"><h4><span class="dot"></span>Growth Experiments</h4><p>Prioritised backlog + weekly learning loop → Experiment roadmap + findings + next actions</p></div>
+    <div class="card" style="grid-column:1/-1;"><h4><span class="dot"></span>Reporting</h4><p>Weekly pulse + monthly business review → Performance report + decisions + next-month plan</p></div>
+  </div>
+
+  <h3 style="margin:34px 0 16px; font-size:18px; color:#fff;">ما لا يشمله هذا العرض تلقائيًا — Assumptions & Exclusions</h3>
+  <ul class="xlist">
+    <li>ميزانيات الإعلانات ورسوم المنصات أو أدوات الطرف الثالث.</li>
+    <li>تطوير ميزات داخل التطبيق أو تعديل الكود، إلا إذا تم الاتفاق عليه كمسار تطوير منفصل.</li>
+    <li>رسوم MMP أو أدوات BI/ASO المدفوعة إن تم اعتمادها.</li>
+    <li>تكاليف المؤثرين أو الإنتاج الخارجي أو التصوير المتقدم إن تطلبت الحملة ذلك.</li>
+    <li>أي التزام رقمي بنتائج مضمونة قبل الاطلاع على baseline والميزانية والبيانات الفعلية.</li>
+  </ul>
+  <div class="callout" style="background:rgba(255,255,255,0.08); border-color:#7a6bff; color:#e8e5ff;">
+    <b>ملاحظة تجارية:</b> عدد القطع الإبداعية، حجم إدارة المجتمع، وعدد الأسواق والقنوات النشطة شهريًا يتم تثبيتها في العرض التجاري/العقد النهائي حتى يكون نطاق التنفيذ واضحًا للطرفين.
+  </div>
+</section>
+
+<!-- 13 GOVERNANCE + NEXT -->
+<section id="next" class="band">
+  <div class="section-head">
+    <div class="num-badge">13</div>
+    <div>
+      <h2>متطلبات البدء ومسؤوليات الطرفين</h2>
+      <p>Client Requirements & Governance</p>
+    </div>
+  </div>
+
+  <div class="grid cols-2">
+    <div class="card">
+      <h4><span class="dot"></span>من Cliptx</h4>
+      <p
